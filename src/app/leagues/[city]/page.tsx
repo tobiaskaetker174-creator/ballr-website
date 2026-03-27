@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { PitchCard } from "@/components/PitchCard";
 
 export function generateStaticParams() {
   return allCitySlugs.map((city) => ({ city }));
@@ -13,10 +14,15 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const data = cityData[slug];
   if (!data) return { title: "Not Found" };
   return {
-    title: `${data.name} Pickup Football Leagues â BallR`,
+    title: `${data.name} Pickup Football Leagues \u2014 BallR`,
     description: `Join ${data.stats.leagues} pickup football leagues in ${data.name}. ${data.stats.players} active players. Find games, track your Elo, play tonight.`,
     keywords: [`${data.name} pickup football`, `${data.name} football league`, `football ${data.name}`, `BallR ${data.name}`],
   };
+}
+
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr + "T00:00:00");
+  return date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
 }
 
 export default async function CityLeaguePage({ params }: { params: Promise<{ city: string }> }) {
@@ -53,12 +59,12 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
           <span className="text-text-muted text-sm">Follow BallR {data.name}:</span>
           {data.socials.instagram && (
             <a href={data.socials.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 bg-surface border border-border/20 rounded-lg px-3 py-1.5 hover:border-accent/40 transition-colors text-sm">
-              <span>ð¸</span> <span className="text-text-secondary">Instagram</span>
+              <span>&#x1F4F8;</span> <span className="text-text-secondary">Instagram</span>
             </a>
           )}
           {data.socials.tiktok && (
             <a href={data.socials.tiktok} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 bg-surface border border-border/20 rounded-lg px-3 py-1.5 hover:border-accent/40 transition-colors text-sm">
-              <span>ðµ</span> <span className="text-text-secondary">TikTok</span>
+              <span>&#x1F3B5;</span> <span className="text-text-secondary">TikTok</span>
             </a>
           )}
         </div>
@@ -102,6 +108,49 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               </div>
             </section>
 
+            {/* Upcoming Games */}
+            {data.upcomingGames.length > 0 && (
+              <section>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-lg">&#x1F4C5;</span>
+                  <h2 className="text-xl font-black">Upcoming Games</h2>
+                </div>
+                <div className="space-y-3">
+                  {data.upcomingGames.map((game, i) => {
+                    const spotsLeft = game.spotsTotal - game.spotsFilled;
+                    const fillPercent = Math.round((game.spotsFilled / game.spotsTotal) * 100);
+                    return (
+                      <div key={i} className="bg-surface border border-border/20 rounded-2xl p-4 hover:border-accent/20 transition-colors">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-3">
+                            <div className="bg-primary/10 rounded-xl px-3 py-1.5 text-center min-w-[70px]">
+                              <p className="text-xs text-accent font-bold">{formatDate(game.date)}</p>
+                              <p className="text-sm font-black text-text">{game.time}</p>
+                            </div>
+                            <div>
+                              <p className="text-sm font-bold">{game.venue}</p>
+                              <p className="text-xs text-text-muted">{game.price === "Free" ? "Free" : game.price + " / person"}</p>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <span className={`text-xs font-bold ${spotsLeft <= 3 ? "text-red-400" : "text-green-400"}`}>
+                              {spotsLeft} spot{spotsLeft !== 1 ? "s" : ""} left
+                            </span>
+                            <div className="w-20 h-1.5 bg-border/20 rounded-full mt-1 overflow-hidden">
+                              <div
+                                className={`h-full rounded-full transition-all ${fillPercent >= 80 ? "bg-red-400" : "bg-accent"}`}
+                                style={{ width: `${fillPercent}%` }}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
+
             {/* Private Leagues */}
             <section>
               <div className="flex items-center gap-2 mb-4">
@@ -119,14 +168,14 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
                   </div>
                 ))}
                 <p className="text-text-muted text-xs mt-2">
-                  Want your own private league in {data.name}? <Link href="/leagues#start" className="text-accent hover:underline">Start one in 60 seconds â</Link>
+                  Want your own private league in {data.name}? <Link href="/leagues#start" className="text-accent hover:underline">Start one in 60 seconds &#x2192;</Link>
                 </p>
               </div>
             </section>
 
             {/* City Organizer */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð¤ Your Organizer</h2>
+              <h2 className="text-xl font-black mb-4">&#x1F91D; Your Organizer</h2>
               <div className="bg-surface border border-border/20 rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-accent/50">
@@ -145,38 +194,19 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               </div>
             </section>
 
-            {/* Venues / Pitches */}
+            {/* Venues / Pitches - now with expandable stats */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð Where We Play</h2>
+              <h2 className="text-xl font-black mb-2">&#x1F3DF; Where We Play</h2>
+              <p className="text-xs text-text-muted mb-4">Click a venue to see pitch stats</p>
               <div className="space-y-4">
                 {data.venues.map((venue) => (
-                  <div key={venue.name} className="bg-surface border border-border/20 rounded-2xl overflow-hidden">
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="relative w-full sm:w-48 h-36 sm:h-auto shrink-0">
-                        <Image src={venue.img} alt={venue.name} fill className="object-cover" />
-                      </div>
-                      <div className="p-4 flex-1">
-                        <div className="flex items-start justify-between mb-2">
-                          <div>
-                            <h3 className="font-bold text-sm">{venue.name}</h3>
-                            <p className="text-xs text-text-muted">{venue.address}</p>
-                          </div>
-                          <span className="text-accent text-xs font-semibold shrink-0 ml-2">{venue.price}</span>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          <span className="text-[10px] bg-primary/10 text-accent px-2 py-0.5 rounded-lg">{venue.type}</span>
-                          <span className="text-[10px] bg-surface border border-border/30 text-text-muted px-2 py-0.5 rounded-lg">{venue.surface}</span>
-                          <span className="text-[10px] bg-surface border border-border/30 text-text-muted px-2 py-0.5 rounded-lg">{venue.capacity}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <PitchCard key={venue.name} venue={venue} />
                 ))}
               </div>
 
               {/* Mini map placeholder */}
               <div className="mt-4 bg-[#0f1114] border border-border/20 rounded-2xl p-6 text-center">
-                <div className="text-text-muted text-sm mb-2">ð All venues on map</div>
+                <div className="text-text-muted text-sm mb-2">&#x1F4CD; All venues on map</div>
                 <div className="flex flex-wrap justify-center gap-3">
                   {data.venues.map((v) => (
                     <a
@@ -186,7 +216,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
                       rel="noopener noreferrer"
                       className="text-xs text-accent hover:underline bg-surface/50 rounded-lg px-3 py-1.5"
                     >
-                      {v.name} â
+                      {v.name} &#x2197;
                     </a>
                   ))}
                 </div>
@@ -195,7 +225,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Player of the Month */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð Baller of the Month â {data.playerOfMonth.month}</h2>
+              <h2 className="text-xl font-black mb-4">&#x1F3C6; Baller of the Month &#x2014; {data.playerOfMonth.month}</h2>
               <div className="bg-gradient-to-r from-[#2D5A27]/20 to-surface rounded-2xl border border-[#2D5A27]/30 p-6">
                 <div className="flex items-center gap-4">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-accent">
@@ -215,7 +245,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               {/* Archive */}
               <details className="mt-4 group">
                 <summary className="text-sm text-accent cursor-pointer hover:underline flex items-center gap-1">
-                  <span className="group-open:rotate-90 transition-transform">â¶</span> View past Ballers of the Month
+                  <span className="group-open:rotate-90 transition-transform">&#x25B6;</span> View past Ballers of the Month
                 </summary>
                 <div className="mt-3 space-y-2">
                   {data.playerOfMonthArchive.map((p) => (
@@ -240,11 +270,11 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Goal of the Month */}
             <section>
-              <h2 className="text-xl font-black mb-4">â½ Goal of the Month â {data.goalOfMonth.month}</h2>
+              <h2 className="text-xl font-black mb-4">&#x26BD; Goal of the Month &#x2014; {data.goalOfMonth.month}</h2>
               <div className="bg-surface border border-accent/20 rounded-2xl p-6">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center shrink-0">
-                    <span className="text-lg">ð¥</span>
+                    <span className="text-lg">&#x1F525;</span>
                   </div>
                   <div>
                     <p className="font-bold text-sm">{data.goalOfMonth.scorer}</p>
@@ -260,12 +290,12 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               {/* Archive */}
               <details className="mt-4 group">
                 <summary className="text-sm text-accent cursor-pointer hover:underline flex items-center gap-1">
-                  <span className="group-open:rotate-90 transition-transform">â¶</span> View past Goals of the Month
+                  <span className="group-open:rotate-90 transition-transform">&#x25B6;</span> View past Goals of the Month
                 </summary>
                 <div className="mt-3 space-y-2">
                   {data.goalOfMonthArchive.map((g) => (
                     <div key={g.month} className="bg-surface border border-border/20 rounded-xl p-3 flex items-center gap-3">
-                      <span className="text-lg shrink-0">â½</span>
+                      <span className="text-lg shrink-0">&#x26BD;</span>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-bold">{g.scorer}</span>
@@ -282,7 +312,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Blog links */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð° Articles about {data.name}</h2>
+              <h2 className="text-xl font-black mb-4">&#x1F4F0; Articles about {data.name}</h2>
               <div className="space-y-2">
                 {data.blogLinks.map((link) => (
                   <Link key={link.href} href={link.href} className="block bg-surface border border-border/20 rounded-xl p-4 hover:border-accent/30 transition-colors group">
@@ -305,14 +335,14 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               </Link>
             </div>
 
-            {/* Full Leaderboard â Top 10 */}
+            {/* Full Leaderboard - Top 10 */}
             <div className="bg-surface border border-border/20 rounded-2xl p-6">
               <h3 className="text-sm font-black uppercase tracking-wider text-accent mb-4">{data.name} Top 10</h3>
               <div className="space-y-2">
                 {data.leaderboard.map((player) => (
                   <div key={player.rank} className={`flex items-center gap-2 ${player.rank <= 3 ? "py-1" : ""}`}>
                     <span className="text-text-muted text-xs w-5 font-mono text-right">{player.rank}</span>
-                    <span className="text-sm w-5 text-center">{player.rank <= 3 ? ["ð¥", "ð¥", "ð¥"][player.rank - 1] : ""}</span>
+                    <span className="text-sm w-5 text-center">{player.rank <= 3 ? ["\u{1F947}", "\u{1F948}", "\u{1F949}"][player.rank - 1] : ""}</span>
                     <span className={`text-sm flex-1 ${player.rank <= 3 ? "font-bold" : ""}`}>{player.name}</span>
                     <span className="text-xs text-accent font-bold">{player.elo}</span>
                   </div>
@@ -326,7 +356,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               <div className="space-y-2">
                 {data.socials.instagram && (
                   <a href={data.socials.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-lg hover:bg-primary/10 transition-colors">
-                    <span className="text-lg">ð¸</span>
+                    <span className="text-lg">&#x1F4F8;</span>
                     <div>
                       <p className="text-sm font-semibold">Instagram</p>
                       <p className="text-xs text-text-muted">@ballr.{data.slug}</p>
@@ -335,7 +365,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
                 )}
                 {data.socials.tiktok && (
                   <a href={data.socials.tiktok} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-lg hover:bg-primary/10 transition-colors">
-                    <span className="text-lg">ðµ</span>
+                    <span className="text-lg">&#x1F3B5;</span>
                     <div>
                       <p className="text-sm font-semibold">TikTok</p>
                       <p className="text-xs text-text-muted">@ballr.{data.slug}</p>
