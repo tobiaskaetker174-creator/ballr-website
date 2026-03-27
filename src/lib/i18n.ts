@@ -1,0 +1,93 @@
+export const translations = {
+  en: {
+    nav: {
+      whyBallr: "Why BallR",
+      about: "About",
+      blog: "Blog",
+      careers: "Careers",
+      vote: "Vote",
+      download: "Download App",
+      login: "Login",
+    },
+    hero: {
+      badge: "Now live in Bangkok & Bali",
+      title1: "The App for",
+      title2: "Pickup Football.",
+      subtitle: "BallR lets you find games, join with one tap, and play â with fair teams, real skill ratings, and zero WhatsApp chaos.",
+      cta: "Download BallR",
+      whyBallr: "Why BallR?",
+      free: "Free on iOS & Android.",
+    },
+    howItWorks: {
+      title: "How BallR Works",
+      subtitle: "Three steps. That's it. From \"I want to play\" to actually playing.",
+      step1Title: "Find a Game",
+      step1Desc: "Open BallR, browse games near you. Filter by skill level, game size, time, and venue. Pick one that fits.",
+      step2Title: "Join & Pay",
+      step2Desc: "Reserve your spot with one tap. Pay directly in the app. No cash collection drama, no last-minute dropouts.",
+      step3Title: "Show Up & Play",
+      step3Desc: "Teams are balanced automatically by skill rating. Just show up, play, and watch your ELO rating move.",
+    },
+    sellingPoints: {
+      title: "What Makes It Click",
+      sp1Title: "Fair Teams, Every Game",
+      sp1Desc: "Every player has an ELO rating based on real game results. When you join a game, our algorithm splits the group into balanced teams automatically.",
+      sp2Title: "Know Who Shows Up",
+      sp2Desc: "Every player has a profile with their reliability score, skill rating, and peer reviews. No-shows get penalized. Consistent players get rewarded.",
+      sp3Title: "Games at Your Fingertips",
+      sp3Desc: "See every available game on a live map. Filter by skill level, time, price, game size. Join in seconds. Play tonight.",
+    },
+    download: {
+      title: "Ready to Play?",
+      subtitle: "Download BallR, find a game tonight, and start building your rating.",
+      share: "Let your network know you're a baller.",
+    },
+  },
+  th: {
+    nav: {
+      whyBallr: "à¸à¸³à¹à¸¡à¸à¹à¸­à¸ BallR",
+      about: "à¹à¸à¸µà¹à¸¢à¸§à¸à¸±à¸à¹à¸£à¸²",
+      blog: "à¸à¸¥à¹à¸­à¸",
+      careers: "à¸£à¹à¸§à¸¡à¸à¸²à¸",
+      vote: "à¹à¸«à¸§à¸",
+      download: "à¸à¸²à¸§à¸à¹à¹à¸«à¸¥à¸à¹à¸­à¸",
+      login: "à¹à¸à¹à¸²à¸ªà¸¹à¹à¸£à¸°à¸à¸",
+    },
+    hero: {
+      badge: "à¹à¸à¸´à¸à¹à¸«à¹à¸à¸£à¸´à¸à¸²à¸£à¹à¸¥à¹à¸§à¹à¸à¸à¸£à¸¸à¸à¹à¸à¸à¸¯ à¹à¸¥à¸°à¸à¸²à¸«à¸¥à¸µ",
+      title1: "à¹à¸­à¸à¸ªà¸³à¸«à¸£à¸±à¸",
+      title2: "à¸à¸¸à¸à¸à¸­à¸¥à¸à¹à¸²à¸à¸ªà¸à¸²à¸¡",
+      subtitle: "BallR à¸à¹à¸§à¸¢à¹à¸«à¹à¸à¸¸à¸à¸«à¸²à¹à¸à¸¡ à¹à¸à¹à¸²à¸£à¹à¸§à¸¡à¸à¹à¸§à¸¢à¸à¸²à¸£à¹à¸à¸°à¹à¸à¸µà¸¢à¸§ à¹à¸¥à¸°à¹à¸¥à¹à¸à¹à¸à¹ â à¸à¸µà¸¡à¸à¸µà¹à¸¢à¸¸à¸à¸´à¸à¸£à¸£à¸¡ à¹à¸£à¸à¸à¸´à¹à¸à¸à¸µà¸¡à¸·à¸­à¸à¸£à¸´à¸ à¹à¸¡à¹à¸à¹à¸­à¸à¸§à¸¸à¹à¸à¸§à¸²à¸¢à¸à¸±à¸ WhatsApp",
+      cta: "à¸à¸²à¸§à¸à¹à¹à¸«à¸¥à¸ BallR",
+      whyBallr: "à¸à¸³à¹à¸¡à¸à¹à¸­à¸ BallR?",
+      free: "à¸à¸£à¸µà¸à¸ iOS à¹à¸¥à¸° Android",
+    },
+    howItWorks: {
+      title: "BallR à¸à¸³à¸à¸²à¸à¸­à¸¢à¹à¸²à¸à¹à¸£",
+      subtitle: "à¸ªà¸²à¸¡à¸à¸±à¹à¸à¸à¸­à¸ à¹à¸à¹à¸à¸±à¹à¸ à¸à¸²à¸ \"à¸­à¸¢à¸²à¸à¹à¸¥à¹à¸\" à¹à¸à¸à¸¶à¸ \"à¹à¸¥à¹à¸à¸à¸£à¸´à¸\"",
+      step1Title: "à¸«à¸²à¹à¸à¸¡",
+      step1Desc: "à¹à¸à¸´à¸ BallR à¹à¸¥à¸·à¸­à¸à¹à¸à¸¡à¹à¸à¸¥à¹à¸à¸¸à¸ à¸à¸£à¸­à¸à¸à¸²à¸¡à¸£à¸°à¸à¸±à¸à¸à¸µà¸¡à¸·à¸­ à¸à¸à¸²à¸à¹à¸à¸¡ à¹à¸§à¸¥à¸² à¹à¸¥à¸°à¸ªà¸à¸²à¸¡",
+      step2Title: "à¹à¸à¹à¸²à¸£à¹à¸§à¸¡à¹à¸¥à¸°à¸à¹à¸²à¸¢à¹à¸à¸´à¸",
+      step2Desc: "à¸à¸­à¸à¸à¸µà¹à¸à¹à¸§à¸¢à¸à¸²à¸£à¹à¸à¸°à¹à¸à¸µà¸¢à¸§ à¸à¹à¸²à¸¢à¹à¸à¸´à¸à¹à¸à¹à¸­à¸à¹à¸à¸¢à¸à¸£à¸ à¹à¸¡à¹à¸à¹à¸­à¸à¹à¸à¹à¸à¹à¸à¸´à¸à¸ªà¸ à¹à¸¡à¹à¸¡à¸µà¸à¸à¸«à¸²à¸¢à¹à¸",
+      step3Title: "à¸¡à¸²à¹à¸¥à¹à¸à¹à¸¥à¸¢",
+      step3Desc: "à¸à¸µà¸¡à¸à¸°à¸à¸¹à¸à¹à¸à¹à¸à¸­à¸±à¸à¹à¸à¸¡à¸±à¸à¸´à¸à¸²à¸¡à¹à¸£à¸à¸à¸´à¹à¸à¸à¸µà¸¡à¸·à¸­ à¹à¸à¹à¸¡à¸²à¹à¸¥à¹à¸ à¹à¸¥à¸°à¸à¸¹à¸à¸°à¹à¸à¸ ELO à¸à¸­à¸à¸à¸¸à¸à¹à¸à¸´à¹à¸¡à¸à¸¶à¹à¸",
+    },
+    sellingPoints: {
+      title: "à¸­à¸°à¹à¸£à¸à¸³à¹à¸«à¹à¸¡à¸±à¸à¸à¸´à¹à¸¨à¸©",
+      sp1Title: "à¸à¸µà¸¡à¸à¸µà¹à¸¢à¸¸à¸à¸´à¸à¸£à¸£à¸¡ à¸à¸¸à¸à¹à¸à¸¡",
+      sp1Desc: "à¸à¸¹à¹à¹à¸¥à¹à¸à¸à¸¸à¸à¸à¸à¸¡à¸µà¹à¸£à¸à¸à¸´à¹à¸ ELO à¸à¸²à¸à¸à¸¥à¹à¸à¸¡à¸à¸£à¸´à¸ à¹à¸¡à¸·à¹à¸­à¸à¸¸à¸à¹à¸à¹à¸²à¸£à¹à¸§à¸¡ à¸­à¸±à¸¥à¸à¸­à¸£à¸´à¸à¸¶à¸¡à¸à¸°à¹à¸à¹à¸à¸à¸µà¸¡à¸­à¸¢à¹à¸²à¸à¸ªà¸¡à¸à¸¸à¸¥à¸­à¸±à¸à¹à¸à¸¡à¸±à¸à¸´",
+      sp2Title: "à¸£à¸¹à¹à¸§à¹à¸²à¹à¸à¸£à¸¡à¸²à¹à¸¥à¹à¸",
+      sp2Desc: "à¸à¸¹à¹à¹à¸¥à¹à¸à¸à¸¸à¸à¸à¸à¸¡à¸µà¹à¸à¸£à¹à¸à¸¥à¹à¸à¸£à¹à¸­à¸¡à¸à¸°à¹à¸à¸à¸à¸§à¸²à¸¡à¸à¹à¸²à¹à¸à¸·à¹à¸­à¸à¸·à¸­ à¹à¸£à¸à¸à¸´à¹à¸à¸à¸µà¸¡à¸·à¸­ à¹à¸¥à¸°à¸£à¸µà¸§à¸´à¸§à¸à¸²à¸à¹à¸à¸·à¹à¸­à¸à¸£à¹à¸§à¸¡à¹à¸à¸¡",
+      sp3Title: "à¹à¸à¸¡à¸­à¸¢à¸¹à¹à¸à¸¥à¸²à¸¢à¸à¸´à¹à¸§",
+      sp3Desc: "à¸à¸¹à¹à¸à¸¡à¸à¸±à¹à¸à¸«à¸¡à¸à¸à¸à¹à¸à¸à¸à¸µà¹à¸ªà¸ à¸à¸£à¸­à¸à¸à¸²à¸¡à¸£à¸°à¸à¸±à¸à¸à¸µà¸¡à¸·à¸­ à¹à¸§à¸¥à¸² à¸£à¸²à¸à¸² à¹à¸à¹à¸²à¸£à¹à¸§à¸¡à¹à¸à¹à¹à¸à¹à¸¡à¹à¸à¸µà¹à¸§à¸´à¸à¸²à¸à¸µ",
+    },
+    download: {
+      title: "à¸à¸£à¹à¸­à¸¡à¹à¸¥à¹à¸à¸«à¸£à¸·à¸­à¸¢à¸±à¸?",
+      subtitle: "à¸à¸²à¸§à¸à¹à¹à¸«à¸¥à¸ BallR à¸«à¸²à¹à¸à¸¡à¸à¸·à¸à¸à¸µà¹ à¹à¸¥à¹à¸§à¹à¸£à¸´à¹à¸¡à¸ªà¸£à¹à¸²à¸à¹à¸£à¸à¸à¸´à¹à¸à¸à¸­à¸à¸à¸¸à¸",
+      share: "à¸à¸­à¸à¹à¸à¸·à¹à¸­à¸à¸§à¹à¸²à¸à¸¸à¸à¹à¸à¹à¸à¸à¸±à¸à¹à¸à¸°",
+    },
+  },
+} as const;
+
+export type Lang = keyof typeof translations;
+export type Translations = typeof translations.en;
