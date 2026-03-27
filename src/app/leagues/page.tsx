@@ -48,10 +48,10 @@ export default function LeaguesPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-4">
-            THE WORLD IS <span className="text-accent">PLAYING</span>
+            FIND YOUR <span className="text-accent">LEAGUE</span>
           </h1>
           <p className="text-xl sm:text-2xl text-text-secondary mb-3 font-semibold">
-            1,247 leagues. 89 cities. One app.
+            Bangkok. Bali. Berlin. More cities coming soon.
           </p>
 
           {/* Scrolling city names */}
@@ -69,12 +69,6 @@ export default function LeaguesPage() {
               className="bg-primary hover:bg-primary-dark text-text font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 duration-200 w-full sm:w-auto"
             >
               Explore Leagues
-            </a>
-            <a
-              href="#start"
-              className="border border-accent/50 hover:border-accent text-text font-semibold px-8 py-4 rounded-2xl text-lg transition-all w-full sm:w-auto text-center"
-            >
-              Start Your Own
             </a>
           </div>
         </div>
@@ -109,7 +103,7 @@ export default function LeaguesPage() {
             <p className="text-text-secondary">One per city. Open to everyone. Show up and play.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {publicLeagues.map((league) => (
               <Link
                 key={league.slug}
@@ -149,140 +143,17 @@ export default function LeaguesPage() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
 
-      {/* SECTION 4: START YOUR OWN â 2 options */}
-      <section id="start" className="py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-16">
-            <p className="text-text-muted text-lg mb-4">â OR â</p>
-            <h2 className="text-3xl sm:text-5xl font-black mb-4">
-              START YOUR OWN <span className="text-accent">LEAGUE</span>
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Two ways to bring BallR to your world.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Option A: Bring BallR to Your City (Public League â Franchise) */}
-            <div className="bg-surface border border-red-400/20 rounded-2xl p-8 flex flex-col">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <span className="text-xs text-red-400 font-semibold uppercase tracking-wider">Official BallR League</span>
-              </div>
-              <h3 className="text-2xl font-black mb-3">
-                Bring BallR to <span className="text-accent">Your City</span>
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed mb-4 flex-1">
-                Launch an official public BallR league in your city. Open to everyone,
-                managed by you. We give you the tools, the platform, and the support.
-                You build the community.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-text-secondary">
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> Open to all players in your city</li>
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> BallR branding &amp; platform support</li>
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> Revenue share &amp; organizer tools</li>
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> City-wide leaderboard &amp; rankings</li>
-              </ul>
-              <Link
-                href="/careers"
-                className="block bg-red-500/20 hover:bg-red-500/30 text-red-400 font-bold text-center py-3 rounded-xl transition-colors"
-              >
-                Apply as City Organizer â
-              </Link>
-              <p className="text-text-muted text-xs mt-2 text-center">
-                Franchise &amp; organizer opportunities
-              </p>
-            </div>
-
-            {/* Option B: Start a Private League */}
-            <div className="bg-surface border border-yellow-400/20 rounded-2xl p-8 flex flex-col">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">Private League</span>
-              </div>
-              <h3 className="text-2xl font-black mb-3">
-                Start a League with <span className="text-accent">Your Crew</span>
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed mb-4 flex-1">
-                Create a private, invite-only league for your friends, your office,
-                your neighborhood. You set the rules, the schedule, the vibe.
-                BallR handles everything else.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-text-secondary">
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> Invite-only â your people only</li>
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> Your rules, your schedule</li>
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> Private leaderboard &amp; stats</li>
-                <li className="flex items-center gap-2"><span className="text-accent">â</span> Free to start, no credit card</li>
-              </ul>
-              <a
-                href="#private-preview"
-                className="block bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-400 font-bold text-center py-3 rounded-xl transition-colors"
-              >
-                See How It Works â
-              </a>
-              <p className="text-text-muted text-xs mt-2 text-center">
-                Takes 60 seconds in the app
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: Private League â App Screenshots */}
-      <section id="private-preview" className="py-24 bg-surface/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <div className="flex items-center gap-2 justify-center mb-2">
-              <div className="w-3 h-3 rounded-full bg-yellow-400" />
-              <div className="text-sm text-yellow-400 font-semibold uppercase tracking-wider">Private League</div>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-              Your League, <span className="text-accent">Your Way</span>
-            </h2>
-            <p className="text-text-secondary max-w-xl mx-auto">
-              Here&apos;s what it looks like inside the app when you run your own private league.
-            </p>
-          </div>
-
-          {/* App mockups side by side */}
-          <div className="flex gap-8 justify-center flex-wrap md:flex-nowrap mb-12">
-            <div className="text-center">
-              <CreateLeagueScreen />
-              <p className="text-text-muted text-xs mt-3">Create your league in seconds</p>
-            </div>
-            <div className="text-center">
-              <PrivateLeagueScreen />
-              <p className="text-text-muted text-xs mt-3">Manage games, stats, leaderboard</p>
-            </div>
-          </div>
-
-          {/* 3 step explanation */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {[
-              { step: "1", title: "Name it.", desc: "Pick a name & set your game fee.", icon: "âï¸" },
-              { step: "2", title: "Invite them.", desc: "Share a link. They join. Done.", icon: "ð" },
-              { step: "3", title: "Play ball.", desc: "BallR handles Elo, payments & stats.", icon: "â½" },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl">{item.icon}</span>
-                </div>
-                <div className="text-accent text-xs font-bold uppercase tracking-wider mb-1">Step {item.step}</div>
-                <h3 className="text-lg font-black mb-1">{item.title}</h3>
-                <p className="text-text-secondary text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <a href="#download" className="inline-block bg-primary hover:bg-primary-dark text-text font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105">
-              Start Your Private League
-            </a>
-            <p className="text-text-muted text-xs mt-3">Free to start. No credit card.</p>
+            {/* Where Next? card */}
+            <Link
+              href="/vote"
+              className="bg-surface border-2 border-dashed border-accent/30 rounded-2xl overflow-hidden hover:border-accent/60 transition-all group flex flex-col items-center justify-center min-h-[200px] p-6 text-center"
+            >
+              <div className="text-4xl mb-3">🌍</div>
+              <h3 className="text-lg font-black mb-1">Where Next?</h3>
+              <p className="text-text-secondary text-sm">Vote for the next BallR city</p>
+              <span className="mt-3 text-accent text-sm font-semibold group-hover:underline">Vote Now →</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -322,71 +193,6 @@ export default function LeaguesPage() {
         </div>
       </section>
 
-      {/* SECTION 7: Feature Comparison â Public vs Private */}
-      <section className="py-24 bg-surface/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-              Official vs <span className="text-accent">Private</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* Public */}
-            <div className="bg-surface border border-red-400/20 rounded-2xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <h3 className="text-lg font-black">Official BallR League</h3>
-              </div>
-              <ul className="space-y-2 text-text-secondary text-sm">
-                <li>Open to anyone in the city</li>
-                <li>City-wide ranking</li>
-                <li>BallR sets the rules</li>
-                <li>Fixed schedule</li>
-                <li>Meet new players</li>
-                <li>Join existing community</li>
-              </ul>
-            </div>
-            {/* Private */}
-            <div className="bg-surface border border-yellow-400/20 rounded-2xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                <h3 className="text-lg font-black">Private League</h3>
-              </div>
-              <ul className="space-y-2 text-text-secondary text-sm">
-                <li>Invite-only</li>
-                <li>Your crew&apos;s ranking</li>
-                <li>YOU set the rules</li>
-                <li>Your schedule</li>
-                <li>Play with your people</li>
-                <li>BUILD your community</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Shared features */}
-          <div className="bg-surface border border-accent/20 rounded-2xl p-6">
-            <p className="text-xs text-accent font-semibold uppercase tracking-wider mb-4 text-center">Both get</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {comparisonFeatures.map((f) => (
-                <div key={f.feature} className="flex items-center gap-2">
-                  <span className="text-accent text-xs">â</span>
-                  <span className="text-sm text-text-secondary">{f.feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a href="#explore" className="bg-primary hover:bg-primary-dark text-text font-bold px-6 py-3 rounded-xl transition-colors text-center">
-              Join an Official League
-            </a>
-            <a href="#private-preview" className="border border-yellow-400/40 hover:border-yellow-400 text-yellow-400 font-bold px-6 py-3 rounded-xl transition-colors text-center">
-              Start a Private League
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 8: Live Activity Feed */}
       <section className="py-24">
@@ -409,18 +215,13 @@ export default function LeaguesPage() {
         <div className="absolute inset-0 bg-background/85" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-5xl font-black mb-4">
-            YOUR CITY. YOUR RULES.
-            <br />
-            <span className="text-accent">YOUR LEAGUE.</span>
+            READY TO <span className="text-accent">PLAY?</span>
           </h2>
           <p className="text-text-secondary text-lg mb-10 max-w-xl mx-auto">
-            Start a BallR League in 60 seconds. Free. No credit card. Worldwide.
+            Download BallR, find a game tonight, and start building your rating.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#" className="bg-primary hover:bg-primary-dark text-text font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105">
-              START YOUR LEAGUE
-            </a>
-            <a href="#" className="border border-border/50 hover:border-accent/50 text-text-secondary hover:text-text font-semibold px-8 py-4 rounded-2xl text-lg transition-all text-center">
               Download the App
             </a>
           </div>

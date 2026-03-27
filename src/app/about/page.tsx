@@ -132,12 +132,18 @@ export default function AboutPage() {
           </section>
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href="/#download"
             className="inline-block bg-primary hover:bg-primary-dark text-text font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105"
           >
             Join the Community
+          </a>
+          <a
+            href="mailto:invest@ballr.club?subject=Investor%20Interest%20-%20BallR"
+            className="inline-block border-2 border-accent hover:bg-accent/10 text-accent font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105"
+          >
+            Become an Investor
           </a>
         </div>
       </div>

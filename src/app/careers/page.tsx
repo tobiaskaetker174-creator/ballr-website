@@ -28,29 +28,11 @@ export default function CareersPage() {
             Join the <span className="text-accent">BallR Network</span>
           </h1>
           <p className="text-text-secondary text-lg max-w-xl mx-auto">
-            Become an organizer in your city or start a BallR franchise.
-            Either way, you&apos;re bringing football to the people.
+            Become an organizer in your city and bring football to the people.
           </p>
         </div>
 
-        <div className="flex gap-2 bg-surface rounded-2xl p-1.5 mb-10 max-w-sm mx-auto">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all ${
-                activeTab === tab
-                  ? "bg-primary text-text"
-                  : "text-text-secondary hover:text-text"
-              }`}
-            >
-              {tab} Program
-            </button>
-          ))}
-        </div>
-
-        {activeTab === "Organizer" ? (
-          <div className="space-y-8">
+        <div className="space-y-8">
             <div className="bg-surface border border-border/30 rounded-2xl p-6 sm:p-8">
               <h2 className="text-2xl font-black mb-4">Become a BallR Organizer</h2>
               <p className="text-text-secondary leading-relaxed mb-6">
@@ -86,33 +68,6 @@ export default function CareersPage() {
             </div>
             <OrganizerForm />
           </div>
-        ) : (
-          <div className="space-y-8">
-            <div className="bg-surface border border-border/30 rounded-2xl p-6 sm:p-8">
-              <h2 className="text-2xl font-black mb-4">BallR Franchise Program</h2>
-              <p className="text-text-secondary leading-relaxed mb-6">
-                Own a BallR location or league in your city. Get the full
-                startup kit, platform access, and ongoing support to build a
-                thriving pickup football community.
-              </p>
-              <ul className="space-y-3 text-text-secondary text-sm">
-                {[
-                  "Exclusive city territory",
-                  "Full BallR platform & brand license",
-                  "Startup kit with marketing materials",
-                  "Ongoing operational support",
-                  "Revenue sharing model",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="text-accent mt-0.5">â</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <FranchiseForm />
-          </div>
-        )}
 
         <div className="mt-16 bg-surface border border-border/30 rounded-2xl p-6 sm:p-8 text-center">
           <h3 className="text-xl font-black mb-2">Organizer Community</h3>

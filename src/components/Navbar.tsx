@@ -9,9 +9,8 @@ const navLinks = [
   { href: "/leagues", label: "Leagues" },
   { href: "/different", label: "Why BallR" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
   { href: "/careers", label: "Careers" },
-  { href: "/vote", label: "Vote" },
+  { href: "/vote", label: "Next City" },
 ];
 
 export function Navbar() {
