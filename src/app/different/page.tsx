@@ -102,36 +102,6 @@ export default function DifferentPage() {
           ))}
         </div>
 
-        {/* AI-Powered Features */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-black text-center mb-3">
-            AI-Powered <span className="text-accent">Smart Features</span>
-          </h2>
-          <p className="text-text-secondary text-center mb-8 max-w-lg mx-auto">
-            BallR uses AI to make every game better &mdash; from team creation to player insights.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="bg-surface border border-border/20 rounded-2xl p-6 hover:border-accent/30 transition-colors">
-              <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-xl">&#x1F9E0;</span>
-              </div>
-              <h3 className="font-bold text-sm mb-2">AI Team Suggestions</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                KI schl&auml;gt basierend auf Spieler-Pr&auml;ferenzen die perfekte Aufstellung vor. Our AI analyzes Elo ratings, preferred positions, play styles, and past team chemistry to create the most balanced and enjoyable teams possible.
-              </p>
-            </div>
-            <div className="bg-surface border border-border/20 rounded-2xl p-6 hover:border-accent/30 transition-colors">
-              <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-xl">&#x1F4CA;</span>
-              </div>
-              <h3 className="font-bold text-sm mb-2">Player Position Comparison</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Vor dem Absagen sieht man, wo man im Vergleich zu den anderen Spielern steht. Before canceling a game, you can see exactly how your skill level compares to other signed-up players &mdash; so you know what you&apos;re walking into.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* App mockups showing the solutions */}
         <div className="mt-16">
           <h2 className="text-2xl font-black text-center mb-8">
