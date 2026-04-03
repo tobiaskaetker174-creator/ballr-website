@@ -7,10 +7,10 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const navLinks = [
   { href: "/leagues", label: "Leagues" },
+  { href: "/create", label: "Create League" },
   { href: "/different", label: "Why BallR" },
   { href: "/about", label: "About" },
-  { href: "/careers", label: "Careers" },
-  { href: "/vote", label: "Next City" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export function Navbar() {
