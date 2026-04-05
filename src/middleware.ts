@@ -10,7 +10,9 @@ export function middleware(request: NextRequest) {
   if (
     request.nextUrl.pathname.startsWith("/_next") ||
     request.nextUrl.pathname.startsWith("/api/auth") ||
-    request.nextUrl.pathname === "/favicon.ico"
+    request.nextUrl.pathname === "/favicon.ico" ||
+    request.nextUrl.pathname === "/how-it-works" ||
+    request.nextUrl.pathname === "/faq"
   ) {
     return NextResponse.next();
   }
