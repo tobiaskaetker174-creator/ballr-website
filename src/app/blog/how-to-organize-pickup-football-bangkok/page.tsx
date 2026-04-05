@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How to Organize Pickup Football in Bangkok â BallR Blog",
+  title: "How to Organize Pickup Football in Bangkok — BallR Blog",
   description:
     "A practical guide to setting up regular pickup football games in Bangkok. Find venues, manage payments, deal with no-shows, and keep your group coming back every week.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Organize Pickup Football in Bangkok",
     description:
-      "A practical guide to setting up regular pickup football games in Bangkok â from venues to payments to dealing with flakers.",
+      "A practical guide to setting up regular pickup football games in Bangkok — from venues to payments to dealing with flakers.",
     type: "article",
     siteName: "BallR",
   },
@@ -49,7 +49,7 @@ export default function HowToOrganizePickupFootballBangkok() {
               <span className="text-accent">Bangkok</span>
             </h1>
             <p className="text-text-secondary text-lg leading-relaxed">
-              A practical guide to setting up regular games in Bangkok â from
+              A practical guide to setting up regular games in Bangkok — from
               finding venues to managing payments and keeping players coming back
               week after week.
             </p>
@@ -93,25 +93,25 @@ export default function HowToOrganizePickupFootballBangkok() {
             </p>
             <ul className="space-y-3 text-text-secondary">
               <li className="flex gap-2">
-                <span className="text-accent font-bold">The Pitch BKK</span> â
+                <span className="text-accent font-bold">The Pitch BKK</span> —
                 One of the most popular 5-a-side and 7-a-side venues in
                 Sukhumvit. Artificial turf, floodlights, easy BTS access. Book
                 early because weekday evening slots go fast.
               </li>
               <li className="flex gap-2">
-                <span className="text-accent font-bold">Arena 10</span> â
+                <span className="text-accent font-bold">Arena 10</span> —
                 Located near Thonglor, this is a go-to for expats. Multiple
                 pitch sizes, decent facilities, and surrounded by food options
                 for post-game refueling.
               </li>
               <li className="flex gap-2">
                 <span className="text-accent font-bold">Benjakitti Park</span>{" "}
-                â If you prefer outdoor grass, Benjakitti has open spaces for
+                — If you prefer outdoor grass, Benjakitti has open spaces for
                 casual kickabouts. Free to use but you will be sharing with
                 joggers and the occasional confused tourist.
               </li>
               <li className="flex gap-2">
-                <span className="text-accent font-bold">Lumpini Park</span> â
+                <span className="text-accent font-bold">Lumpini Park</span> —
                 The OG Bangkok park pitch. Great for early morning weekend
                 sessions. Show up at 7am on a Saturday and you will find a game
                 happening already.
@@ -256,7 +256,7 @@ export default function HowToOrganizePickupFootballBangkok() {
               </h2>
               <p className="text-text-secondary mb-6 max-w-lg mx-auto">
                 BallR handles RSVPs, payments, waitlists, team balancing, and
-                player ratings â so you can focus on the actual football.
+                player ratings — so you can focus on the actual football.
                 Available in Bangkok and Bali.
               </p>
               <Link

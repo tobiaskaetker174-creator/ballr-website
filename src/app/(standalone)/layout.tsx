@@ -3,7 +3,7 @@ import Image from "next/image";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "BallR â Find Your Game. Build Your Rating.",
+  title: "BallR — Find Your Game. Build Your Rating.",
   description:
     "Die Pickup-Fussball-App fuer Bangkok & Bali. Finde Spiele, baue dein ELO-Rating auf und verpasse nie wieder ein Match.",
 };

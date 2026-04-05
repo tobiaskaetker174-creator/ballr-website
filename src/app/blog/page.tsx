@@ -2,9 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog â BallR",
+  title: "Blog — BallR",
   description:
     "Tips, guides, and stories about pickup football in Bangkok, Bali, and beyond.",
+  openGraph: {
+    title: "Blog — BallR",
+    description: "Tips, guides, and insights about pickup football. From organizing games to building communities.",
+    type: "website",
+    siteName: "BallR",
+  },
 };
 
 const blogPosts = [
@@ -12,7 +18,7 @@ const blogPosts = [
     slug: "how-to-organize-pickup-football-bangkok",
     title: "How to Organize Pickup Football in Bangkok",
     excerpt:
-      "A practical guide to setting up regular games in Bangkok â from finding venues to managing payments and keeping players coming back.",
+      "A practical guide to setting up regular games in Bangkok — from finding venues to managing payments and keeping players coming back.",
     category: "Guide",
     date: "March 2026",
     readTime: "5 min",
@@ -48,7 +54,7 @@ const blogPosts = [
     slug: "team-balancing-casual-soccer",
     title: "Team Balancing in Casual Soccer: Why It Matters",
     excerpt:
-      "The science and art of making fair teams. From ELO ratings to snake drafts â how BallR keeps games competitive.",
+      "The science and art of making fair teams. From ELO ratings to snake drafts — how BallR keeps games competitive.",
     category: "Product",
     date: "March 2026",
     readTime: "5 min",

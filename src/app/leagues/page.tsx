@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Browse Leagues — BallR",
   description: "Explore public pickup football leagues worldwide. Join one near you or create your own.",
   keywords: ["pickup football leagues", "football league app", "start football league", "BallR leagues"],
+  openGraph: {
+    title: "Browse Leagues — BallR",
+    description: "Explore public pickup football leagues worldwide. Join one near you or create your own.",
+    type: "website",
+    siteName: "BallR",
+  },
 };
 
 // Demo data — will be fetched from Supabase

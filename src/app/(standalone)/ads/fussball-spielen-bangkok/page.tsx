@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Fussball spielen in Bangkok â Jetzt loslegen | BallR",
+  title: "Fussball spielen in Bangkok — Jetzt loslegen | BallR",
   description:
-    "Fussball spielen in Bangkok. Finde Spiele, buche in Sekunden und spiele noch heute. BallR â die #1 Fussball-App in Bangkok.",
+    "Fussball spielen in Bangkok. Finde Spiele, buche in Sekunden und spiele noch heute. BallR — die #1 Fussball-App in Bangkok.",
   keywords: [
     "Fussball spielen Bangkok",
     "Fussball Bangkok",
@@ -67,10 +67,10 @@ export default function FussballSpielenBangkokAds() {
         {/* Benefits */}
         <div className="space-y-3 mb-10">
           {[
-            "Spiele jeden Tag â morgens, mittags, abends",
-            "5v5, 6v6, 7v7 â alle Formate verfuegbar",
+            "Spiele jeden Tag — morgens, mittags, abends",
+            "5v5, 6v6, 7v7 — alle Formate verfuegbar",
             "Faire Teams durch ELO-basierte Aufteilung",
-            "Online bezahlen â 200-400 THB pro Spiel",
+            "Online bezahlen — 200-400 THB pro Spiel",
             "Alle Level willkommen",
             "Kunstrasen & Rasenplaetze in ganz Bangkok",
           ].map((benefit) => (
@@ -78,7 +78,7 @@ export default function FussballSpielenBangkokAds() {
               key={benefit}
               className="flex items-center gap-3 bg-surface border border-border/30 rounded-xl p-4"
             >
-              <span className="text-accent text-lg">â</span>
+              <span className="text-accent text-lg">✓</span>
               <span className="text-sm font-medium">{benefit}</span>
             </div>
           ))}
@@ -113,14 +113,14 @@ export default function FussballSpielenBangkokAds() {
               veraendert. Ich finde jetzt in Sekunden ein Spiel, statt ewig in
               Gruppen zu suchen.&rdquo;
             </p>
-            <div className="text-sm font-bold">â Jan, Digitaler Nomade</div>
+            <div className="text-sm font-bold">— Jan, Digitaler Nomade</div>
           </div>
           <div className="bg-surface border border-accent/30 rounded-2xl p-6">
             <p className="text-text-secondary italic mb-3">
               &ldquo;Die Team-Aufteilung ist super fair. Jedes Spiel ist eng
               und macht Spass. Genau so soll Fussball sein.&rdquo;
             </p>
-            <div className="text-sm font-bold">â Felix, Expat aus Berlin</div>
+            <div className="text-sm font-bold">— Felix, Expat aus Berlin</div>
           </div>
         </div>
 

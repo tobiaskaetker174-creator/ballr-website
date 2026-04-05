@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Expat Fussball in Bangkok â Finde Anschluss & spiele mit | BallR",
+  title: "Expat Fussball in Bangkok — Finde Anschluss & spiele mit | BallR",
   description:
     "Als Expat Fussball in Bangkok spielen? BallR verbindet dich mit der internationalen Fussball-Community. Finde Spiele, lerne Leute kennen und bleib aktiv.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Fussball Auslaender Bangkok",
   ],
   openGraph: {
-    title: "Expat Fussball in Bangkok â Finde Anschluss & spiele mit | BallR",
+    title: "Expat Fussball in Bangkok — Finde Anschluss & spiele mit | BallR",
     description:
       "Als Expat Fussball in Bangkok spielen? BallR verbindet dich mit der internationalen Fussball-Community.",
     type: "website",
@@ -50,7 +50,7 @@ export default function ExpatFussballBangkokSEO() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-6 left-6 text-white">
             <p className="text-sm font-medium opacity-80">
-              Internationale Community â ueber 20 Nationalitaeten
+              Internationale Community — ueber 20 Nationalitaeten
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function ExpatFussballBangkokSEO() {
         <article className="prose-invert max-w-none space-y-12">
           <section>
             <h2 className="text-2xl font-black mb-4">
-              Fussball als Expat in Bangkok â Die Herausforderung
+              Fussball als Expat in Bangkok — Die Herausforderung
             </h2>
             <p className="text-text-secondary leading-relaxed">
               Als Expat in einer neuen Stadt Fussball zu spielen, ist oft
@@ -70,7 +70,7 @@ export default function ExpatFussballBangkokSEO() {
             <p className="text-text-secondary leading-relaxed mt-4">
               In Bangkok gibt es eine lebendige Expat-Fussball-Szene mit
               Spielern aus ueber 20 Laendern. Das Problem ist nicht das
-              Angebot â es ist die Zugaenglichkeit. Informationen sind ueber
+              Angebot — es ist die Zugaenglichkeit. Informationen sind ueber
               dutzende Messenger-Gruppen verstreut, und als Neuankoemmling
               braucht man oft Wochen, um die richtigen Kontakte zu finden.
             </p>
@@ -83,28 +83,28 @@ export default function ExpatFussballBangkokSEO() {
             <p className="text-text-secondary leading-relaxed">
               BallR wurde genau fuer diese Situation entwickelt. Statt
               wochenlang nach der richtigen Gruppe zu suchen, oeffnest du
-              einfach die App und siehst sofort alle verfuegbaren Spiele â
+              einfach die App und siehst sofort alle verfuegbaren Spiele —
               gefiltert nach deinem Standort, deiner bevorzugten Spielzeit und
               deinem Skill-Level.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mt-6">
               <FeatureCard
-                icon="ð"
+                icon="🌍"
                 title="Internationale Community"
                 description="Spieler aus ueber 20 Laendern. Die Sprache auf dem Platz? Fussball."
               />
               <FeatureCard
-                icon="ð¤"
+                icon="🤝"
                 title="Sofort Anschluss"
                 description="Kein muehsames Suchen. Melde dich an und spiele noch am selben Abend."
               />
               <FeatureCard
-                icon="âï¸"
+                icon="⚖️"
                 title="Faire Spiele"
                 description="ELO-basierte Team-Aufteilung sorgt fuer ausgeglichene Matches."
               />
               <FeatureCard
-                icon="ð"
+                icon="🔄"
                 title="Flexibel"
                 description="Keine Vereinsverpflichtung. Spiele wann und wie oft du willst."
               />
@@ -123,7 +123,7 @@ export default function ExpatFussballBangkokSEO() {
             </p>
             <p className="text-text-secondary leading-relaxed mt-4">
               Die meisten Spiele finden auf modernen Kunstrasenplaetzen statt,
-              viele davon in der Naehe von Sukhumvit, Silom und Sathorn â den
+              viele davon in der Naehe von Sukhumvit, Silom und Sathorn — den
               beliebtesten Expat-Vierteln der Stadt. Die Spiele sind in der
               Regel abends zwischen 18 und 22 Uhr, perfekt nach einem langen
               Arbeitstag.
@@ -138,7 +138,7 @@ export default function ExpatFussballBangkokSEO() {
               {[
                 {
                   q: "Muss ich gut sein, um mitzuspielen?",
-                  a: "Nein! BallR bietet Spiele fuer alle Level â von kompletten Anfaengern bis zu ehemaligen Vereinsspielern.",
+                  a: "Nein! BallR bietet Spiele fuer alle Level — von kompletten Anfaengern bis zu ehemaligen Vereinsspielern.",
                 },
                 {
                   q: "Wie viel kostet ein Spiel?",
@@ -169,7 +169,7 @@ export default function ExpatFussballBangkokSEO() {
               Mehr als nur Fussball
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Fuer viele Expats ist Fussball mehr als nur Sport â es ist eine
+              Fuer viele Expats ist Fussball mehr als nur Sport — es ist eine
               Moeglichkeit, Freundschaften zu schliessen, fit zu bleiben und
               sich in einer neuen Stadt heimisch zu fuehlen. Die BallR-Community
               organisiert regelmaessig After-Game-Events, und viele Spieler

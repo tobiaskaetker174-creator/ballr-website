@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Building a Consistent Pickup Football Community â BallR Blog",
+  title: "Building a Consistent Pickup Football Community — BallR Blog",
   description:
     "Why most pickup football WhatsApp groups die after 3 months, and how to build a reliable community that actually lasts. Tips on reliability systems, communication, and what BallR does differently.",
   keywords: [
@@ -79,7 +79,7 @@ export default function BuildingConsistentFootballCommunity() {
               The good news is that building a lasting football community is not
               about luck or having the perfect group of people. It is about
               systems, expectations, and creating an environment where showing
-              up is the default â not the exception.
+              up is the default — not the exception.
             </p>
 
             {/* Section 1 */}
@@ -130,9 +130,9 @@ export default function BuildingConsistentFootballCommunity() {
             <ul className="space-y-3 text-text-secondary">
               <li>
                 <span className="font-semibold text-white">Organizer burnout.</span>{" "}
-                One person does all the work â booking the pitch, collecting
+                One person does all the work — booking the pitch, collecting
                 money, chasing confirmations, dealing with last-minute dropouts
-                â and eventually just stops. When the organizer burns out, the
+                — and eventually just stops. When the organizer burns out, the
                 group dies.
               </li>
               <li>
@@ -167,7 +167,7 @@ export default function BuildingConsistentFootballCommunity() {
             </h2>
             <p className="text-text-secondary leading-relaxed">
               The core of any lasting football community is reliability. Not
-              skill, not fancy venues, not matching jerseys â reliability. When
+              skill, not fancy venues, not matching jerseys — reliability. When
               players trust that the game will happen, that enough people will
               show up, and that the experience will be good, they keep coming
               back.
@@ -193,7 +193,7 @@ export default function BuildingConsistentFootballCommunity() {
                   Enforce cancellation policies
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Set a clear window â say, 12 hours before kickoff. Drop out
+                  Set a clear window — say, 12 hours before kickoff. Drop out
                   before the deadline and no problem. Drop out after, and you
                   still owe your share (unless the waitlist fills your spot).
                   This simple rule changes behavior fast.
@@ -227,7 +227,7 @@ export default function BuildingConsistentFootballCommunity() {
             </h2>
             <p className="text-text-secondary leading-relaxed">
               The groups that last the longest are the ones that become more than
-              just a game. They become a social anchor â the thing that gets you
+              just a game. They become a social anchor — the thing that gets you
               out of the house, introduces you to people from completely
               different backgrounds, and gives you something to look forward
               to every week.
@@ -241,8 +241,8 @@ export default function BuildingConsistentFootballCommunity() {
             </p>
             <p className="text-text-secondary leading-relaxed">
               Stats and friendly competition help too. When players can see
-              their performance over time â goals scored, games played,
-              reliability rating â it gives them a reason to stay engaged even
+              their performance over time — goals scored, games played,
+              reliability rating — it gives them a reason to stay engaged even
               during the weeks when dragging themselves off the couch feels
               like a monumental effort.
             </p>
@@ -262,7 +262,7 @@ export default function BuildingConsistentFootballCommunity() {
                   <span className="text-accent">&#10003;</span>
                   <span>
                     <span className="font-semibold text-white">Smart RSVPs</span>{" "}
-                    â One-tap confirmation with automatic waitlist management.
+                    — One-tap confirmation with automatic waitlist management.
                     No more counting thumbs-up emojis.
                   </span>
                 </li>
@@ -270,7 +270,7 @@ export default function BuildingConsistentFootballCommunity() {
                   <span className="text-accent">&#10003;</span>
                   <span>
                     <span className="font-semibold text-white">Reliability tracking</span>{" "}
-                    â Every player has a reliability score based on their
+                    — Every player has a reliability score based on their
                     attendance history. Reliable players get priority.
                   </span>
                 </li>
@@ -278,7 +278,7 @@ export default function BuildingConsistentFootballCommunity() {
                   <span className="text-accent">&#10003;</span>
                   <span>
                     <span className="font-semibold text-white">ELO-based team balancing</span>{" "}
-                    â Fair teams generated automatically from actual match
+                    — Fair teams generated automatically from actual match
                     data. No more lopsided games.
                   </span>
                 </li>
@@ -286,7 +286,7 @@ export default function BuildingConsistentFootballCommunity() {
                   <span className="text-accent">&#10003;</span>
                   <span>
                     <span className="font-semibold text-white">Player stats and leaderboards</span>{" "}
-                    â Monthly competitions and rankings keep the community
+                    — Monthly competitions and rankings keep the community
                     engaged between sessions.
                   </span>
                 </li>
@@ -294,7 +294,7 @@ export default function BuildingConsistentFootballCommunity() {
                   <span className="text-accent">&#10003;</span>
                   <span>
                     <span className="font-semibold text-white">Automated reminders</span>{" "}
-                    â Players get notified before each game. The organizer
+                    — Players get notified before each game. The organizer
                     does not have to chase anyone.
                   </span>
                 </li>
@@ -307,7 +307,7 @@ export default function BuildingConsistentFootballCommunity() {
             </h2>
             <p className="text-text-secondary leading-relaxed">
               Building a football community takes patience. The first month is
-              about logistics â getting the venue, the time, and the numbers
+              about logistics — getting the venue, the time, and the numbers
               right. The second and third months are about establishing norms
               and weeding out the unreliable. By month six, if you have done
               things right, you will have a core group of 15-20 people who
@@ -337,7 +337,7 @@ export default function BuildingConsistentFootballCommunity() {
               </h2>
               <p className="text-text-secondary mb-6 max-w-lg mx-auto">
                 BallR gives you the tools to run a reliable, fair, and fun
-                football community â without the admin headache. RSVPs,
+                football community — without the admin headache. RSVPs,
                 payments, teams, stats, all in one place.
               </p>
               <Link

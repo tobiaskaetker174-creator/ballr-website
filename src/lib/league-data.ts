@@ -61,7 +61,7 @@ export const cityData: Record<string, CityLeagueData> = {
     slug: "bangkok",
     name: "Bangkok",
     country: "Thailand",
-    flag: "ð¹ð­",
+    flag: "🇹🇭",
     stats: { leagues: 12, players: 340, gamesThisMonth: 48 },
     publicLeagues: [
       { name: "Official BallR League Bangkok", type: "public", price: "200 THB", players: 340 },
@@ -129,7 +129,7 @@ export const cityData: Record<string, CityLeagueData> = {
     ],
     organizer: {
       name: "Tobias K.",
-      role: "City Organizer â Bangkok",
+      role: "City Organizer — Bangkok",
       bio: "German expat who moved to Bangkok in 2024. Started organizing pickup games after struggling to find consistent football. Now runs the largest pickup community in the city.",
       img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80",
       since: "2024",
@@ -175,7 +175,7 @@ export const cityData: Record<string, CityLeagueData> = {
     slug: "berlin",
     name: "Berlin",
     country: "Germany",
-    flag: "ð©ðª",
+    flag: "🇩🇪",
     stats: { leagues: 8, players: 210, gamesThisMonth: 32 },
     publicLeagues: [
       { name: "Official BallR League Berlin", type: "public", price: "5 EUR", players: 210 },
@@ -193,9 +193,9 @@ export const cityData: Record<string, CityLeagueData> = {
       { rank: 5, name: "DerMeister", elo: 1310 },
       { rank: 6, name: "PBergPro", elo: 1290 },
       { rank: 7, name: "GoalGetter", elo: 1270 },
-      { rank: 8, name: "TorJÃ¤ger", elo: 1250 },
+      { rank: 8, name: "TorJäger", elo: 1250 },
       { rank: 9, name: "MitteMarco", elo: 1230 },
-      { rank: 10, name: "NeukÃ¶llnNinja", elo: 1210 },
+      { rank: 10, name: "NeuköllnNinja", elo: 1210 },
     ],
     img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80",
     photos: [
@@ -228,7 +228,7 @@ export const cityData: Record<string, CityLeagueData> = {
     goalOfMonth: {
       month: "March 2026",
       scorer: "KreuzbergKing",
-      description: "Chipped the keeper from 25 yards at GÃ¶rlitzer Park. Absolutely filthy.",
+      description: "Chipped the keeper from 25 yards at Görlitzer Park. Absolutely filthy.",
       votes: 38,
     },
     goalOfMonthArchive: [
@@ -238,7 +238,7 @@ export const cityData: Record<string, CityLeagueData> = {
     ],
     organizer: {
       name: "Marcus W.",
-      role: "City Organizer â Berlin",
+      role: "City Organizer — Berlin",
       bio: "Born and raised in Kreuzberg. Played semi-pro for Hertha BSC U19. Started the Berlin BallR community to bring the same intensity to pickup football.",
       img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80",
       since: "2025",
@@ -246,9 +246,9 @@ export const cityData: Record<string, CityLeagueData> = {
     },
     venues: [
       {
-        name: "GÃ¶rlitzer Park Pitch",
+        name: "Görlitzer Park Pitch",
         type: "7v7 / 10v10",
-        address: "GÃ¶rlitzer Park, Kreuzberg",
+        address: "Görlitzer Park, Kreuzberg",
         img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&q=80",
         capacity: "14-20 players",
         surface: "Natural grass",
@@ -284,7 +284,7 @@ export const cityData: Record<string, CityLeagueData> = {
     slug: "bali",
     name: "Bali",
     country: "Indonesia",
-    flag: "ð®ð©",
+    flag: "🇮🇩",
     stats: { leagues: 3, players: 87, gamesThisMonth: 16 },
     publicLeagues: [
       { name: "Official BallR League Bali", type: "public", price: "50K IDR", players: 87 },
@@ -345,7 +345,7 @@ export const cityData: Record<string, CityLeagueData> = {
     ],
     organizer: {
       name: "Joao P.",
-      role: "City Organizer â Bali",
+      role: "City Organizer — Bali",
       bio: "Brazilian surfer and football fanatic who settled in Canggu. Combines his love for the beach and the beautiful game. Known for organizing sunset matches that end with cold Bintangs.",
       img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80",
       since: "2025",

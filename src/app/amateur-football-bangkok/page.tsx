@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Amateur Football in Bangkok â Join BallR | BallR",
+  title: "Amateur Football in Bangkok — Join BallR | BallR",
   description:
     "Join Bangkok's amateur football scene through BallR. Organized games, fair team balancing, skill ratings, and a real community.",
   keywords: [
@@ -47,19 +47,19 @@ export default function AmateurFootballBangkok() {
             <div className="grid sm:grid-cols-2 gap-3">
               {[
                 {
-                  level: "ð± Beginner",
+                  level: "🌱 Beginner",
                   desc: "New to football or getting back into it. Relaxed games, no judgment.",
                 },
                 {
-                  level: "â¡ Intermediate",
+                  level: "⚡ Intermediate",
                   desc: "Regular players who know the basics and want competitive games.",
                 },
                 {
-                  level: "ð¥ Advanced",
+                  level: "🔥 Advanced",
                   desc: "High-level players looking for serious competition.",
                 },
                 {
-                  level: "â½ Mixed",
+                  level: "⚽ Mixed",
                   desc: "All levels welcome. Teams balanced by ELO for fairness.",
                 },
               ].map((item) => (
@@ -80,7 +80,7 @@ export default function AmateurFootballBangkok() {
             <h2 className="text-2xl font-black mb-4">Game Formats</h2>
             <p className="text-text-secondary leading-relaxed">
               BallR supports 5v5, 6v6, 7v7, and 10v10 formats. Games typically
-              run 60â120 minutes. Prices range from 150â400 THB per player
+              run 60–120 minutes. Prices range from 150–400 THB per player
               depending on the venue and format. Everything is booked and paid
               through the app.
             </p>

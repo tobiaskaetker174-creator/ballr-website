@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Play Football in Bangkok Today â Start with BallR",
+  title: "Play Football in Bangkok Today — Start with BallR",
   description:
     "Start playing football in Bangkok today. BallR has daily pickup games at top venues. Download the app, find a game, show up.",
   keywords: [
@@ -15,7 +15,7 @@ export default function PlayFootballBangkok() {
   return (
     <div className="pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        {/* Ads-style hero â conversion focused */}
+        {/* Ads-style hero — conversion focused */}
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-5xl font-black mb-4">
             Play Football in Bangkok{" "}
@@ -29,19 +29,19 @@ export default function PlayFootballBangkok() {
             href="/#download"
             className="inline-block bg-primary hover:bg-primary-dark text-text font-bold px-10 py-4 rounded-2xl text-lg transition-all hover:scale-105"
           >
-            Download BallR â Free
+            Download BallR — Free
           </a>
         </div>
 
         {/* Benefits */}
         <div className="grid sm:grid-cols-2 gap-4 mb-12">
           {[
-            { icon: "â¡", text: "Games every day of the week" },
-            { icon: "ðï¸", text: "Premium turf and grass venues" },
-            { icon: "âï¸", text: "Fair, ELO-balanced teams" },
-            { icon: "ð³", text: "Online booking and payment" },
-            { icon: "ð", text: "Track your skill rating" },
-            { icon: "ð¤", text: "Community ratings for safety" },
+            { icon: "⚡", text: "Games every day of the week" },
+            { icon: "🏟️", text: "Premium turf and grass venues" },
+            { icon: "⚖️", text: "Fair, ELO-balanced teams" },
+            { icon: "💳", text: "Online booking and payment" },
+            { icon: "📊", text: "Track your skill rating" },
+            { icon: "🤝", text: "Community ratings for safety" },
           ].map((b) => (
             <div
               key={b.text}

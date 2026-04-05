@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Amateur Fussball in Bangkok â Dein Guide fuer Hobbykicker | BallR",
+  title: "Amateur Fussball in Bangkok — Dein Guide fuer Hobbykicker | BallR",
   description:
     "Amateur Fussball in Bangkok: Finde organisierte Spiele fuer Hobbyspieler aller Level. BallR bringt Bangkoks Amateur-Fussball-Community zusammen.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Fussball Community Bangkok",
   ],
   openGraph: {
-    title: "Amateur Fussball in Bangkok â Dein Guide fuer Hobbykicker | BallR",
+    title: "Amateur Fussball in Bangkok — Dein Guide fuer Hobbykicker | BallR",
     description:
       "Amateur Fussball in Bangkok: Finde organisierte Spiele fuer Hobbyspieler aller Level.",
     type: "website",
@@ -59,14 +59,14 @@ export default function AmateurFussballBangkokSEO() {
         <article className="prose-invert max-w-none space-y-12">
           <section>
             <h2 className="text-2xl font-black mb-4">
-              Amateur Fussball in Bangkok â Was dich erwartet
+              Amateur Fussball in Bangkok — Was dich erwartet
             </h2>
             <p className="text-text-secondary leading-relaxed">
               Bangkok ist ein Paradies fuer Amateur-Fussballer. Die Stadt
               bietet dutzende Kunstrasen- und Rasenplaetze, die abends und am
               Wochenende fuer organisierte Spiele genutzt werden. Von
               entspannten Freizeitrunden bis hin zu kompetitiven
-              Amateur-Matches â es gibt fuer jeden das Richtige.
+              Amateur-Matches — es gibt fuer jeden das Richtige.
             </p>
             <p className="text-text-secondary leading-relaxed mt-4">
               Die groesste Herausforderung? Die richtige Gruppe zu finden.
@@ -88,7 +88,7 @@ export default function AmateurFussballBangkokSEO() {
                 },
                 {
                   title: "Gelegenheitsspieler",
-                  desc: "Du spielst ab und zu und suchst flexible Moeglichkeiten? Melde dich einfach an, wenn du Zeit hast â keine Verpflichtungen.",
+                  desc: "Du spielst ab und zu und suchst flexible Moeglichkeiten? Melde dich einfach an, wenn du Zeit hast — keine Verpflichtungen.",
                 },
                 {
                   title: "Fortgeschrittene",
@@ -96,7 +96,7 @@ export default function AmateurFussballBangkokSEO() {
                 },
                 {
                   title: "Comeback-Spieler",
-                  desc: "Nach einer laengeren Pause zurueck? Starte langsam und arbeite dich hoch â in deinem eigenen Tempo.",
+                  desc: "Nach einer laengeren Pause zurueck? Starte langsam und arbeite dich hoch — in deinem eigenen Tempo.",
                 },
               ].map((item) => (
                 <div
@@ -116,22 +116,22 @@ export default function AmateurFussballBangkokSEO() {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               <FeatureCard
-                icon="ðï¸"
+                icon="🏟️"
                 title="Beste Spielorte"
                 description="Zugang zu den besten Kunstrasen- und Rasenplaetzen in ganz Bangkok."
               />
               <FeatureCard
-                icon="ð±"
+                icon="📱"
                 title="Einfache Buchung"
                 description="In wenigen Klicks angemeldet. Bezahle online und erscheine einfach."
               />
               <FeatureCard
-                icon="ð¥"
+                icon="👥"
                 title="Faire Aufteilung"
                 description="ELO-basierte Teams sorgen fuer ausgeglichene und spassige Spiele."
               />
               <FeatureCard
-                icon="ð"
+                icon="📈"
                 title="Dein Fortschritt"
                 description="Verfolge deine Entwicklung mit deinem persoenlichen ELO-Rating."
               />
@@ -152,7 +152,7 @@ export default function AmateurFussballBangkokSEO() {
             <p className="text-text-secondary leading-relaxed mt-4">
               Die Kosten pro Spiel liegen typischerweise zwischen 200 und 400
               Baht pro Person, je nach Spielort und Spieleranzahl. Bei BallR
-              ist die Zahlung direkt in der App moeglich â kein Bargeld noetig.
+              ist die Zahlung direkt in der App moeglich — kein Bargeld noetig.
             </p>
           </section>
 
@@ -164,15 +164,15 @@ export default function AmateurFussballBangkokSEO() {
               {[
                 "Bring Schienbeinschoner und Indoor-Schuhe (TF) mit",
                 "Komm 10 Minuten frueher zum Aufwaermen",
-                "Trink genuegend Wasser â Bangkok ist heiss!",
-                "Sei offen und kommunikativ â die Community ist freundlich",
+                "Trink genuegend Wasser — Bangkok ist heiss!",
+                "Sei offen und kommunikativ — die Community ist freundlich",
                 "Starte mit gemischten Spielen, bevor du dich an kompetitivere wagst",
               ].map((tip) => (
                 <div
                   key={tip}
                   className="flex items-start gap-3 text-text-secondary text-sm"
                 >
-                  <span className="text-accent mt-0.5">â</span>
+                  <span className="text-accent mt-0.5">→</span>
                   <span>{tip}</span>
                 </div>
               ))}

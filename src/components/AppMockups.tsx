@@ -71,10 +71,10 @@ export function DiscoverScreen() {
         {/* Bottom nav */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 bg-[#0f1114] border-t border-[#222]">
           {[
-            { icon: "ð", label: "Discover", active: true },
-            { icon: "ð", label: "My Games", active: false },
-            { icon: "ð", label: "Stats", active: false },
-            { icon: "ð¤", label: "Profile", active: false },
+            { icon: "🔍", label: "Discover", active: true },
+            { icon: "📅", label: "My Games", active: false },
+            { icon: "📊", label: "Stats", active: false },
+            { icon: "👤", label: "Profile", active: false },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-0.5">
               <span className="text-sm">{item.icon}</span>
@@ -101,13 +101,13 @@ export function ProfileScreen() {
         {/* Profile header */}
         <div className="px-4 text-center pb-3">
           <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#2D5A27] to-[#A1D494] mx-auto mb-2 flex items-center justify-center text-2xl">
-            â½
+            ⚽
           </div>
           <h3 className="text-white text-sm font-bold">Marco R.</h3>
           <p className="text-gray-500 text-[10px]">Bangkok &middot; Midfielder</p>
           <div className="flex gap-1 justify-center mt-1">
-            <span className="text-[8px] bg-yellow-500/20 text-yellow-400 px-1.5 py-0.5 rounded">ð¥ 5x POTM</span>
-            <span className="text-[8px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">ð¥ 12 streak</span>
+            <span className="text-[8px] bg-yellow-500/20 text-yellow-400 px-1.5 py-0.5 rounded">🥇 5x POTM</span>
+            <span className="text-[8px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">🔥 12 streak</span>
           </div>
         </div>
         {/* ELO bar */}
@@ -172,10 +172,10 @@ export function ProfileScreen() {
         {/* Bottom nav */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 bg-[#0f1114] border-t border-[#222]">
           {[
-            { icon: "ð", label: "Discover", active: false },
-            { icon: "ð", label: "My Games", active: false },
-            { icon: "ð", label: "Stats", active: false },
-            { icon: "ð¤", label: "Profile", active: true },
+            { icon: "🔍", label: "Discover", active: false },
+            { icon: "📅", label: "My Games", active: false },
+            { icon: "📊", label: "Stats", active: false },
+            { icon: "👤", label: "Profile", active: true },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-0.5">
               <span className="text-sm">{item.icon}</span>
@@ -190,13 +190,13 @@ export function ProfileScreen() {
 
 export function LeaderboardScreen() {
   const players = [
-    { rank: 1, name: "Alex K.", elo: 1680, games: 62, badge: "ð¥" },
-    { rank: 2, name: "Sam T.", elo: 1620, games: 55, badge: "ð¥" },
-    { rank: 3, name: "Marco R.", elo: 1420, games: 48, badge: "ð¥" },
+    { rank: 1, name: "Alex K.", elo: 1680, games: 62, badge: "🥇" },
+    { rank: 2, name: "Sam T.", elo: 1620, games: 55, badge: "🥈" },
+    { rank: 3, name: "Marco R.", elo: 1420, games: 48, badge: "🥉" },
     { rank: 4, name: "David L.", elo: 1380, games: 41, badge: "" },
     { rank: 5, name: "Chris W.", elo: 1350, games: 38, badge: "" },
     { rank: 6, name: "Tom S.", elo: 1310, games: 36, badge: "" },
-    { rank: 7, name: "You", elo: 1290, games: 28, badge: "ð" },
+    { rank: 7, name: "You", elo: 1290, games: 28, badge: "👈" },
   ];
 
   return (
@@ -222,7 +222,7 @@ export function LeaderboardScreen() {
         <div className="mx-4 mb-3 bg-gradient-to-r from-[#2D5A27]/30 to-[#1c1e22] rounded-xl p-3 border border-[#2D5A27]/40">
           <p className="text-[8px] text-[#A1D494] font-semibold uppercase tracking-wider mb-1">Baller of the Month</p>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-sm">ð</div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-sm">🏆</div>
             <div>
               <p className="text-white text-[11px] font-bold">Alex K.</p>
               <p className="text-gray-500 text-[9px]">ELO 1680 &middot; 62 games &middot; 78% win rate</p>
@@ -248,10 +248,10 @@ export function LeaderboardScreen() {
         {/* Bottom nav */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 bg-[#0f1114] border-t border-[#222]">
           {[
-            { icon: "ð", label: "Discover", active: false },
-            { icon: "ð", label: "My Games", active: false },
-            { icon: "ð", label: "Stats", active: true },
-            { icon: "ð¤", label: "Profile", active: false },
+            { icon: "🔍", label: "Discover", active: false },
+            { icon: "📅", label: "My Games", active: false },
+            { icon: "📊", label: "Stats", active: true },
+            { icon: "👤", label: "Profile", active: false },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-0.5">
               <span className="text-sm">{item.icon}</span>
@@ -302,9 +302,9 @@ export function PrivateLeagueScreen() {
           <p className="text-[10px] text-gray-400 mb-2">League Leaderboard</p>
           <div className="space-y-1.5">
             {[
-              { rank: 1, name: "Marcus", elo: 1520, badge: "ð¥" },
-              { rank: 2, name: "Jonas", elo: 1480, badge: "ð¥" },
-              { rank: 3, name: "You", elo: 1420, badge: "ð¥" },
+              { rank: 1, name: "Marcus", elo: 1520, badge: "🥇" },
+              { rank: 2, name: "Jonas", elo: 1480, badge: "🥈" },
+              { rank: 3, name: "You", elo: 1420, badge: "🥉" },
               { rank: 4, name: "Stefan", elo: 1380, badge: "" },
             ].map((p) => (
               <div key={p.rank} className={`flex items-center gap-2 p-1.5 rounded-lg ${p.name === "You" ? "bg-[#2D5A27]/20 border border-[#2D5A27]/30" : "bg-[#1c1e22]"}`}>
@@ -323,7 +323,7 @@ export function PrivateLeagueScreen() {
             <div className="flex justify-between items-start mb-1.5">
               <div>
                 <p className="text-white text-[11px] font-semibold">Sunday Session</p>
-                <p className="text-gray-500 text-[9px]">Sun 16:00 Â· GÃ¶rlitzer Park</p>
+                <p className="text-gray-500 text-[9px]">Sun 16:00 · Görlitzer Park</p>
               </div>
               <span className="text-[9px] bg-[#2D5A27] text-white px-2 py-0.5 rounded-md">7/10</span>
             </div>
@@ -343,10 +343,10 @@ export function PrivateLeagueScreen() {
         {/* Bottom nav */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 bg-[#0f1114] border-t border-[#222]">
           {[
-            { icon: "ð ", label: "League", active: true },
-            { icon: "ð", label: "Games", active: false },
-            { icon: "ð", label: "Stats", active: false },
-            { icon: "âï¸", label: "Settings", active: false },
+            { icon: "🏠", label: "League", active: true },
+            { icon: "📅", label: "Games", active: false },
+            { icon: "📊", label: "Stats", active: false },
+            { icon: "⚙️", label: "Settings", active: false },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-0.5">
               <span className="text-sm">{item.icon}</span>
@@ -387,7 +387,7 @@ export function CreateLeagueScreen() {
             <label className="text-[9px] text-gray-400 block mb-1">Type</label>
             <div className="flex gap-2">
               <span className="text-[10px] bg-[#252525] text-gray-400 px-3 py-1.5 rounded-lg">Public</span>
-              <span className="text-[10px] bg-[#2D5A27] text-white px-3 py-1.5 rounded-lg ring-1 ring-[#A1D494]/50">Private â</span>
+              <span className="text-[10px] bg-[#2D5A27] text-white px-3 py-1.5 rounded-lg ring-1 ring-[#A1D494]/50">Private ✓</span>
             </div>
           </div>
           <div>
@@ -421,10 +421,10 @@ export function CreateLeagueScreen() {
         {/* Bottom nav */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 bg-[#0f1114] border-t border-[#222]">
           {[
-            { icon: "ð", label: "Discover", active: false },
-            { icon: "â", label: "Create", active: true },
-            { icon: "ð", label: "Stats", active: false },
-            { icon: "ð¤", label: "Profile", active: false },
+            { icon: "🔍", label: "Discover", active: false },
+            { icon: "➕", label: "Create", active: true },
+            { icon: "📊", label: "Stats", active: false },
+            { icon: "👤", label: "Profile", active: false },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-0.5">
               <span className="text-sm">{item.icon}</span>
@@ -479,7 +479,7 @@ export function MapScreen() {
                 pin.status === "active" ? "bg-[#2D5A27] ring-2 ring-[#A1D494]/50" :
                 pin.status === "upcoming" ? "bg-yellow-600 ring-2 ring-yellow-400/50" :
                 "bg-gray-600"
-              }`}>â½</div>
+              }`}>⚽</div>
               <div className="absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#1c1e22] rounded px-1.5 py-0.5 text-[8px] text-white border border-[#333]">
                 {pin.label} {pin.players && <span className="text-[#A1D494]">{pin.players}</span>}
               </div>
@@ -505,10 +505,10 @@ export function MapScreen() {
         {/* Bottom nav */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 bg-[#0f1114] border-t border-[#222]">
           {[
-            { icon: "ð", label: "Discover", active: false },
-            { icon: "ðºï¸", label: "Map", active: true },
-            { icon: "ð", label: "Stats", active: false },
-            { icon: "ð¤", label: "Profile", active: false },
+            { icon: "🔍", label: "Discover", active: false },
+            { icon: "🗺️", label: "Map", active: true },
+            { icon: "📊", label: "Stats", active: false },
+            { icon: "👤", label: "Profile", active: false },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-0.5">
               <span className="text-sm">{item.icon}</span>

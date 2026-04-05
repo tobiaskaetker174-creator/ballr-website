@@ -15,20 +15,20 @@ interface City {
 }
 
 const cities: City[] = [
-  { name: "Bangkok", x: 72, y: 48, leagues: 12, players: 340, gamesPerWeek: 12, isOfficial: true, hasLiveGame: true, flag: "ð¹ð­" },
-  { name: "Berlin", x: 50, y: 26, leagues: 8, players: 210, gamesPerWeek: 8, isOfficial: true, hasLiveGame: false, flag: "ð©ðª" },
-  { name: "Bali", x: 76, y: 58, leagues: 3, players: 87, gamesPerWeek: 4, isOfficial: true, hasLiveGame: true, flag: "ð®ð©" },
-  { name: "Madrid", x: 44, y: 32, leagues: 6, players: 178, gamesPerWeek: 6, isOfficial: true, hasLiveGame: false, flag: "ðªð¸" },
-  { name: "London", x: 46, y: 24, leagues: 5, players: 156, gamesPerWeek: 5, isOfficial: false, hasLiveGame: true, flag: "ð¬ð§" },
-  { name: "Singapore", x: 74, y: 54, leagues: 4, players: 98, gamesPerWeek: 4, isOfficial: false, hasLiveGame: false, flag: "ð¸ð¬" },
-  { name: "Lagos", x: 46, y: 50, leagues: 2, players: 65, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "ð³ð¬" },
-  { name: "Sao Paulo", x: 30, y: 62, leagues: 3, players: 92, gamesPerWeek: 4, isOfficial: false, hasLiveGame: true, flag: "ð§ð·" },
-  { name: "Barcelona", x: 45, y: 33, leagues: 4, players: 134, gamesPerWeek: 5, isOfficial: false, hasLiveGame: false, flag: "ðªð¸" },
-  { name: "Dubai", x: 58, y: 40, leagues: 2, players: 72, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "ð¦ðª" },
-  { name: "Ho Chi Minh", x: 74, y: 50, leagues: 2, players: 54, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "ð»ð³" },
-  { name: "Lisbon", x: 42, y: 33, leagues: 2, players: 68, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "ðµð¹" },
-  { name: "Buenos Aires", x: 28, y: 70, leagues: 3, players: 85, gamesPerWeek: 4, isOfficial: false, hasLiveGame: false, flag: "ð¦ð·" },
-  { name: "KL", x: 73, y: 53, leagues: 2, players: 48, gamesPerWeek: 2, isOfficial: false, hasLiveGame: false, flag: "ð²ð¾" },
+  { name: "Bangkok", x: 72, y: 48, leagues: 12, players: 340, gamesPerWeek: 12, isOfficial: true, hasLiveGame: true, flag: "🇹🇭" },
+  { name: "Berlin", x: 50, y: 26, leagues: 8, players: 210, gamesPerWeek: 8, isOfficial: true, hasLiveGame: false, flag: "🇩🇪" },
+  { name: "Bali", x: 76, y: 58, leagues: 3, players: 87, gamesPerWeek: 4, isOfficial: true, hasLiveGame: true, flag: "🇮🇩" },
+  { name: "Madrid", x: 44, y: 32, leagues: 6, players: 178, gamesPerWeek: 6, isOfficial: true, hasLiveGame: false, flag: "🇪🇸" },
+  { name: "London", x: 46, y: 24, leagues: 5, players: 156, gamesPerWeek: 5, isOfficial: false, hasLiveGame: true, flag: "🇬🇧" },
+  { name: "Singapore", x: 74, y: 54, leagues: 4, players: 98, gamesPerWeek: 4, isOfficial: false, hasLiveGame: false, flag: "🇸🇬" },
+  { name: "Lagos", x: 46, y: 50, leagues: 2, players: 65, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "🇳🇬" },
+  { name: "Sao Paulo", x: 30, y: 62, leagues: 3, players: 92, gamesPerWeek: 4, isOfficial: false, hasLiveGame: true, flag: "🇧🇷" },
+  { name: "Barcelona", x: 45, y: 33, leagues: 4, players: 134, gamesPerWeek: 5, isOfficial: false, hasLiveGame: false, flag: "🇪🇸" },
+  { name: "Dubai", x: 58, y: 40, leagues: 2, players: 72, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "🇦🇪" },
+  { name: "Ho Chi Minh", x: 74, y: 50, leagues: 2, players: 54, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "🇻🇳" },
+  { name: "Lisbon", x: 42, y: 33, leagues: 2, players: 68, gamesPerWeek: 3, isOfficial: false, hasLiveGame: false, flag: "🇵🇹" },
+  { name: "Buenos Aires", x: 28, y: 70, leagues: 3, players: 85, gamesPerWeek: 4, isOfficial: false, hasLiveGame: false, flag: "🇦🇷" },
+  { name: "KL", x: 73, y: 53, leagues: 2, players: 48, gamesPerWeek: 2, isOfficial: false, hasLiveGame: false, flag: "🇲🇾" },
 ];
 
 type Filter = "all" | "official" | "open";

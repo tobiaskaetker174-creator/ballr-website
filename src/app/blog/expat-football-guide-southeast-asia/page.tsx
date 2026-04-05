@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Expat Football Guide to Southeast Asia â BallR Blog",
+  title: "The Expat Football Guide to Southeast Asia — BallR Blog",
   description:
     "A complete guide for expats playing football in Southeast Asia. Find games in Bangkok, Bali, Ho Chi Minh City, Singapore, and Kuala Lumpur with tips on costs, culture, and communities.",
   keywords: [

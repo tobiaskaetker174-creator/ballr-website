@@ -2,9 +2,15 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About BallR â Our Story",
+  title: "About BallR — Our Story",
   description:
     "BallR started because organizing pickup football shouldn't require a degree in project management. Here's our story.",
+  openGraph: {
+    title: "About BallR — Our Story",
+    description: "BallR started because organizing pickup football shouldn't require a degree in project management.",
+    type: "website",
+    siteName: "BallR",
+  },
 };
 
 export default function AboutPage() {
@@ -38,7 +44,7 @@ export default function AboutPage() {
             <p className="text-text-secondary leading-relaxed">
               Make pickup football accessible, fair, and fun for everyone. Whether
               you&apos;re an expat in Bangkok who just wants a kick-around, or a
-              competitive player in Bali chasing ELO points â BallR is your home
+              competitive player in Bali chasing ELO points — BallR is your home
               pitch.
             </p>
           </section>
@@ -75,9 +81,9 @@ export default function AboutPage() {
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { label: "Find a game", icon: "ð", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80" },
-                { label: "Pay online", icon: "ð³", img: "https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=400&q=80" },
-                { label: "Show up and play", icon: "â½", img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&q=80" },
+                { label: "Find a game", icon: "🔍", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80" },
+                { label: "Pay online", icon: "💳", img: "https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=400&q=80" },
+                { label: "Show up and play", icon: "⚽", img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&q=80" },
               ].map((step) => (
                 <div key={step.label} className="bg-surface border border-border/30 rounded-2xl overflow-hidden">
                   <div className="relative aspect-[16/9]">

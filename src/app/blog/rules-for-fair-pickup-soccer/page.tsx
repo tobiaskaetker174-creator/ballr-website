@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rules for Fair Pickup Soccer Games â BallR Blog",
+  title: "Rules for Fair Pickup Soccer Games — BallR Blog",
   description:
     "The unwritten rules that make pickup soccer fun for everyone. From no slide tackling to proper rotation, here's how to keep your casual games fair and competitive.",
   keywords: [
@@ -72,7 +72,7 @@ export default function RulesForFairPickupSoccer() {
               rules. Some write them down. Most just argue about them until
               someone storms off and posts something passive-aggressive in the
               group chat. To save you from that fate, here are the rules that
-              actually work â battle-tested across dozens of groups in Bangkok,
+              actually work — battle-tested across dozens of groups in Bangkok,
               Bali, and beyond.
             </p>
 
@@ -95,7 +95,7 @@ export default function RulesForFairPickupSoccer() {
 
             {/* Rule 2 */}
             <h2 className="text-2xl font-bold pt-4">
-              2. Balance the Teams â Properly
+              2. Balance the Teams — Properly
             </h2>
             <p className="text-text-secondary leading-relaxed">
               Nothing kills a pickup game faster than one team winning 12-1
@@ -146,7 +146,7 @@ export default function RulesForFairPickupSoccer() {
               (or a portion of them do), and subs come in.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              Another option is timed rotations â every 8-10 minutes, a few
+              Another option is timed rotations — every 8-10 minutes, a few
               players swap regardless of score. This gives everyone roughly
               equal playing time. Whatever system you choose, agree on it before
               the first whistle. Nothing starts arguments faster than unspoken
@@ -158,7 +158,7 @@ export default function RulesForFairPickupSoccer() {
               4. Respect the Skill Range
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Most pickup games have a wide range of abilities â from the guy
+              Most pickup games have a wide range of abilities — from the guy
               who played semi-pro back home to the person who last kicked a ball
               in 2014. Both belong in the game, but both need to adjust.
             </p>
@@ -177,7 +177,7 @@ export default function RulesForFairPickupSoccer() {
             </h2>
             <p className="text-text-secondary leading-relaxed">
               Without a referee, the honor system is all you have. If you foul
-              someone, own it. If you think you were fouled, say so calmly â do
+              someone, own it. If you think you were fouled, say so calmly — do
               not roll around on the turf like you are trying to win an Oscar.
               A simple &quot;yeah, that was me, your ball&quot; keeps the game
               moving and the vibes intact.

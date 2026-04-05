@@ -2,7 +2,7 @@ import { FeatureCard } from "@/components/FeatureCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pickup Football in Bangkok â Find Games Today | BallR",
+  title: "Pickup Football in Bangkok — Find Games Today | BallR",
   description:
     "Looking for pickup football in Bangkok? BallR connects you with organized games at venues across the city. Find your level, join a game, and play today.",
   keywords: [
@@ -42,7 +42,7 @@ export default function PickupFootballBangkok() {
               it hard to know what&apos;s available on any given day.
             </p>
             <p className="text-text-secondary leading-relaxed mt-4">
-              BallR solves this by putting all available games in one place â
+              BallR solves this by putting all available games in one place —
               filtered by skill level, time, venue, and available spots. No
               more guessing, no more last-minute cancellations.
             </p>
@@ -92,22 +92,22 @@ export default function PickupFootballBangkok() {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               <FeatureCard
-                icon="ð¯"
+                icon="🎯"
                 title="Skill-Matched Games"
-                description="Beginner, intermediate, advanced, or mixed â play at your level."
+                description="Beginner, intermediate, advanced, or mixed — play at your level."
               />
               <FeatureCard
-                icon="âï¸"
+                icon="⚖️"
                 title="Fair Teams"
                 description="ELO-based team balancing so every game is competitive."
               />
               <FeatureCard
-                icon="ð³"
+                icon="💳"
                 title="Pay Online"
                 description="No more chasing cash. Pay when you book, refund if you cancel."
               />
               <FeatureCard
-                icon="ð"
+                icon="📊"
                 title="Track Progress"
                 description="Build your ELO rating game by game. See how you stack up."
               />

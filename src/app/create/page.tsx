@@ -4,6 +4,12 @@ import { CreateLeagueForm } from "@/components/CreateLeagueForm";
 export const metadata: Metadata = {
   title: "Create Your League — BallR",
   description: "Start your own pickup football league in 60 seconds. Set your rules, invite your crew, track ELO ratings.",
+  openGraph: {
+    title: "Create Your League — BallR",
+    description: "Start your own pickup football league in 60 seconds. Set your rules, invite your crew.",
+    type: "website",
+    siteName: "BallR",
+  },
 };
 
 export default function CreateLeaguePage() {

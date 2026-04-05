@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Pickup Fussball Bangkok â Jetzt mitspielen | BallR",
+  title: "Pickup Fussball Bangkok — Jetzt mitspielen | BallR",
   description:
-    "Pickup Fussball in Bangkok. Finde Spiele, melde dich an und spiele noch heute. BallR â die #1 App fuer Pickup Fussball.",
+    "Pickup Fussball in Bangkok. Finde Spiele, melde dich an und spiele noch heute. BallR — die #1 App fuer Pickup Fussball.",
   keywords: [
     "Pickup Fussball Bangkok",
     "Fussball spielen Bangkok",
@@ -51,7 +51,7 @@ export default function PickupFussballBangkokAds() {
           {[
             { stat: "87+", label: "Aktive Spieler" },
             { stat: "7", label: "Spiele pro Woche" },
-            { stat: "4.9â", label: "App Bewertung" },
+            { stat: "4.9★", label: "App Bewertung" },
           ].map((item) => (
             <div
               key={item.label}
@@ -68,7 +68,7 @@ export default function PickupFussballBangkokAds() {
           {[
             "Spiele jeden Tag in Bangkok verfuegbar",
             "Skill-basierte Teams fuer faire Spiele",
-            "Online bezahlen â kein Bargeld noetig",
+            "Online bezahlen — kein Bargeld noetig",
             "ELO-Rating & Leaderboard",
             "Kostenlos herunterladen",
           ].map((benefit) => (
@@ -76,7 +76,7 @@ export default function PickupFussballBangkokAds() {
               key={benefit}
               className="flex items-center gap-3 bg-surface border border-border/30 rounded-xl p-4"
             >
-              <span className="text-accent text-lg">â</span>
+              <span className="text-accent text-lg">✓</span>
               <span className="text-sm font-medium">{benefit}</span>
             </div>
           ))}
@@ -89,7 +89,7 @@ export default function PickupFussballBangkokAds() {
             Team-Aufteilung ist genial und die Spiele sind immer
             ausgeglichen.&rdquo;
           </p>
-          <div className="text-sm font-bold">â Marco, Expat aus Deutschland</div>
+          <div className="text-sm font-bold">— Marco, Expat aus Deutschland</div>
         </div>
 
         {/* Contact / Signup Form */}

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Pickup Fussball in Bangkok â Spiele finden & mitspielen | BallR",
+  title: "Pickup Fussball in Bangkok — Spiele finden & mitspielen | BallR",
   description:
     "Du suchst Pickup Fussball in Bangkok? BallR verbindet dich mit organisierten Spielen in der ganzen Stadt. Finde dein Level, tritt einem Spiel bei und spiele noch heute.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Expat Fussball Bangkok",
   ],
   openGraph: {
-    title: "Pickup Fussball in Bangkok â Spiele finden & mitspielen | BallR",
+    title: "Pickup Fussball in Bangkok — Spiele finden & mitspielen | BallR",
     description:
       "Du suchst Pickup Fussball in Bangkok? BallR verbindet dich mit organisierten Spielen in der ganzen Stadt.",
     type: "website",
@@ -34,7 +34,7 @@ export default function PickupFussballBangkokSEO() {
           </h1>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             Dein kompletter Guide, um Pickup-Fussball-Spiele in Bangkok zu
-            finden und mitzuspielen. Von Sukhumvit bis Silom â BallR hat alles
+            finden und mitzuspielen. Von Sukhumvit bis Silom — BallR hat alles
             fuer dich.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function PickupFussballBangkokSEO() {
               Pickup Fussball ist informeller, organisierter Fussball ohne feste
               Mannschaften oder Ligaverpflichtungen. Spieler melden sich fuer
               einzelne Spiele an, Teams werden vor Ort eingeteilt, und jeder kann
-              mitmachen â unabhaengig von Erfahrung oder Herkunft. Es ist die
+              mitmachen — unabhaengig von Erfahrung oder Herkunft. Es ist die
               einfachste Art, in einer neuen Stadt Fussball zu spielen.
             </p>
             <p className="text-text-secondary leading-relaxed mt-4">
@@ -87,7 +87,7 @@ export default function PickupFussballBangkokSEO() {
             </p>
             <p className="text-text-secondary leading-relaxed mt-4">
               BallR loest dieses Problem, indem alle verfuegbaren Spiele an
-              einem Ort zusammengefasst werden â gefiltert nach Spielstaerke,
+              einem Ort zusammengefasst werden — gefiltert nach Spielstaerke,
               Uhrzeit, Spielort und verfuegbaren Plaetzen. Kein Raten mehr,
               keine kurzfristigen Absagen.
             </p>
@@ -137,22 +137,22 @@ export default function PickupFussballBangkokSEO() {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               <FeatureCard
-                icon="ð¯"
+                icon="🎯"
                 title="Skill-basierte Spiele"
-                description="Anfaenger, Fortgeschrittene, Profis oder gemischt â spiele auf deinem Level."
+                description="Anfaenger, Fortgeschrittene, Profis oder gemischt — spiele auf deinem Level."
               />
               <FeatureCard
-                icon="âï¸"
+                icon="⚖️"
                 title="Faire Teams"
                 description="ELO-basierte Team-Aufteilung, damit jedes Spiel ausgeglichen ist."
               />
               <FeatureCard
-                icon="ð³"
+                icon="💳"
                 title="Online bezahlen"
                 description="Kein Bargeld-Stress mehr. Bezahle bei der Buchung, Erstattung bei Absage."
               />
               <FeatureCard
-                icon="ð"
+                icon="📊"
                 title="Fortschritt verfolgen"
                 description="Baue dein ELO-Rating Spiel fuer Spiel auf. Sieh, wie du abschneidest."
               />

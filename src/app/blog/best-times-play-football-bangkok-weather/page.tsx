@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best Times to Play Football in Bangkok Weather â BallR Blog",
+  title: "Best Times to Play Football in Bangkok Weather — BallR Blog",
   description:
     "A seasonal guide to playing football in Bangkok. Learn the best time slots for hot season, rainy season, and cool season so you can skip the heatstroke and enjoy the game.",
   keywords: [

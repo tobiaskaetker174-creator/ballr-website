@@ -12,16 +12,16 @@ interface Activity {
 }
 
 const activities: Activity[] = [
-  { id: 1, type: "live", city: "Bangkok", league: "Thursday Night League", detail: "Game in progress 8/10", flag: "ð¹ð­" },
-  { id: 2, type: "starting", city: "Berlin", league: "Kreuzberg Kickers", detail: "Starting in 30 min", flag: "ð©ðª" },
-  { id: 3, type: "open", city: "Bali", league: "Beach League", detail: "3 spots left for Saturday", flag: "ð®ð©" },
-  { id: 4, type: "live", city: "Madrid", league: "Expat League", detail: "Game in progress 14/14", flag: "ðªð¸" },
-  { id: 5, type: "open", city: "Sao Paulo", league: "FC Amigos", detail: "Booking open for Sunday", flag: "ð§ð·" },
-  { id: 6, type: "completed", city: "London", league: "Shoreditch Ballers", detail: "Final: Team A 4 - 3 Team B", flag: "ð¬ð§" },
-  { id: 7, type: "new_league", city: "Lagos", league: "Victoria Island FC", detail: "New league just started!", flag: "ð³ð¬" },
-  { id: 8, type: "live", city: "Singapore", league: "Google SG Ballers", detail: "Game in progress 10/10", flag: "ð¸ð¬" },
-  { id: 9, type: "starting", city: "Bangkok", league: "Sukhumvit League", detail: "Starting in 2 hours", flag: "ð¹ð­" },
-  { id: 10, type: "open", city: "Barcelona", league: "La Masia Pickup", detail: "5 spots left for Friday", flag: "ðªð¸" },
+  { id: 1, type: "live", city: "Bangkok", league: "Thursday Night League", detail: "Game in progress 8/10", flag: "🇹🇭" },
+  { id: 2, type: "starting", city: "Berlin", league: "Kreuzberg Kickers", detail: "Starting in 30 min", flag: "🇩🇪" },
+  { id: 3, type: "open", city: "Bali", league: "Beach League", detail: "3 spots left for Saturday", flag: "🇮🇩" },
+  { id: 4, type: "live", city: "Madrid", league: "Expat League", detail: "Game in progress 14/14", flag: "🇪🇸" },
+  { id: 5, type: "open", city: "Sao Paulo", league: "FC Amigos", detail: "Booking open for Sunday", flag: "🇧🇷" },
+  { id: 6, type: "completed", city: "London", league: "Shoreditch Ballers", detail: "Final: Team A 4 - 3 Team B", flag: "🇬🇧" },
+  { id: 7, type: "new_league", city: "Lagos", league: "Victoria Island FC", detail: "New league just started!", flag: "🇳🇬" },
+  { id: 8, type: "live", city: "Singapore", league: "Google SG Ballers", detail: "Game in progress 10/10", flag: "🇸🇬" },
+  { id: 9, type: "starting", city: "Bangkok", league: "Sukhumvit League", detail: "Starting in 2 hours", flag: "🇹🇭" },
+  { id: 10, type: "open", city: "Barcelona", league: "La Masia Pickup", detail: "5 spots left for Friday", flag: "🇪🇸" },
 ];
 
 const typeStyles = {

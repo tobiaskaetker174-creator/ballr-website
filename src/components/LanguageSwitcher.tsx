@@ -21,9 +21,9 @@ export function LanguageSwitcher() {
     <button
       onClick={switchLang}
       className="text-xs text-text-muted hover:text-accent transition-colors px-2 py-1 rounded-lg border border-border/30 hover:border-accent/30"
-      title={isThai ? "Switch to English" : "à¹à¸à¸¥à¸µà¹à¸¢à¸à¹à¸à¹à¸à¸ à¸²à¸©à¸²à¹à¸à¸¢"}
+      title={isThai ? "Switch to English" : "เปลี่ยนเป็นภาษาไทย"}
     >
-      {isThai ? "EN ð¬ð§" : "TH ð¹ð­"}
+      {isThai ? "EN 🇬🇧" : "TH 🇹🇭"}
     </button>
   );
 }

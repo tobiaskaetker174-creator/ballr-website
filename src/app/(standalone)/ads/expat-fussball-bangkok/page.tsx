@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Expat Fussball Bangkok â Sofort Anschluss finden | BallR",
+  title: "Expat Fussball Bangkok — Sofort Anschluss finden | BallR",
   description:
-    "Expat in Bangkok? Finde sofort Fussball-Spiele und Anschluss an die internationale Community. BallR â die #1 App fuer Expat-Fussball.",
+    "Expat in Bangkok? Finde sofort Fussball-Spiele und Anschluss an die internationale Community. BallR — die #1 App fuer Expat-Fussball.",
   keywords: [
     "Expat Fussball Bangkok",
     "Fussball fuer Expats Bangkok",
@@ -66,17 +66,17 @@ export default function ExpatFussballBangkokAds() {
         {/* Benefits */}
         <div className="space-y-3 mb-10">
           {[
-            "Internationale Community â ueber 20 Laender",
+            "Internationale Community — ueber 20 Laender",
             "Spiele in der Naehe von Sukhumvit, Silom & Sathorn",
-            "Kein Thai noetig â Spiele auf Englisch",
-            "Sofort Anschluss â komm alleine, geh mit Freunden",
-            "Alle Level willkommen â von Anfaenger bis Profi",
+            "Kein Thai noetig — Spiele auf Englisch",
+            "Sofort Anschluss — komm alleine, geh mit Freunden",
+            "Alle Level willkommen — von Anfaenger bis Profi",
           ].map((benefit) => (
             <div
               key={benefit}
               className="flex items-center gap-3 bg-surface border border-border/30 rounded-xl p-4"
             >
-              <span className="text-accent text-lg">â</span>
+              <span className="text-accent text-lg">✓</span>
               <span className="text-sm font-medium">{benefit}</span>
             </div>
           ))}
@@ -90,7 +90,7 @@ export default function ExpatFussballBangkokAds() {
               ueber BallR sofort eine tolle Fussball-Gruppe gefunden. Beste
               Entscheidung!&rdquo;
             </p>
-            <div className="text-sm font-bold">â Thomas, Expat aus Muenchen</div>
+            <div className="text-sm font-bold">— Thomas, Expat aus Muenchen</div>
           </div>
           <div className="bg-surface border border-accent/30 rounded-2xl p-6">
             <p className="text-text-secondary italic mb-3">
@@ -98,7 +98,7 @@ export default function ExpatFussballBangkokAds() {
               BallR habe ich nicht nur Fussball gespielt, sondern auch meine
               besten Freunde gefunden.&rdquo;
             </p>
-            <div className="text-sm font-bold">â Lukas, Expat aus Zuerich</div>
+            <div className="text-sm font-bold">— Lukas, Expat aus Zuerich</div>
           </div>
         </div>
 

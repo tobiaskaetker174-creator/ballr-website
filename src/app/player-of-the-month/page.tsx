@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Player of the Month â BallR",
+  title: "Player of the Month — BallR",
   description:
     "Monthly archive of BallR's top-rated players. Compete for the crown, earn rewards, and get recognized.",
+  openGraph: {
+    title: "Player of the Month — BallR",
+    description: "Monthly archive of top-rated BallR players.",
+    type: "website",
+    siteName: "BallR",
+  },
 };
 
 const months = [
@@ -12,7 +18,7 @@ const months = [
     winner: {
       name: "Alex K.",
       elo: 1420,
-      tier: "â¡ Intermediate",
+      tier: "⚡ Intermediate",
       wins: 12,
       gamesPlayed: 15,
       winRate: "80%",
@@ -27,7 +33,7 @@ const months = [
     winner: {
       name: "Sam T.",
       elo: 1510,
-      tier: "ð¥ Advanced",
+      tier: "🔥 Advanced",
       wins: 14,
       gamesPlayed: 18,
       winRate: "78%",
@@ -79,7 +85,7 @@ export default function PlayerOfTheMonthPage() {
                 <div className="bg-background border border-accent/30 rounded-2xl p-5 mb-4">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-primary/30 rounded-full flex items-center justify-center text-lg">
-                      ð
+                      🏆
                     </div>
                     <div>
                       <div className="font-bold text-lg">
@@ -121,9 +127,9 @@ export default function PlayerOfTheMonthPage() {
                 {/* Runner ups */}
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { place: "ð¥ 2nd", ...entry.runnerUp },
+                    { place: "🥈 2nd", ...entry.runnerUp },
                     {
-                      place: "ð¥ 3rd",
+                      place: "🥉 3rd",
                       ...entry.thirdPlace,
                     },
                   ].map((p) => (
@@ -149,7 +155,7 @@ export default function PlayerOfTheMonthPage() {
         {/* Privacy note */}
         <div className="mt-10 bg-surface border border-border/30 rounded-2xl p-5 text-center">
           <p className="text-text-secondary text-sm">
-            ð Players can choose to appear as &ldquo;Anonymous&rdquo; in public
+            🔒 Players can choose to appear as &ldquo;Anonymous&rdquo; in public
             archives. You control your visibility at all times.
           </p>
         </div>

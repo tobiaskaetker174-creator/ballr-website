@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Goal of the Month â BallR",
+  title: "Goal of the Month — BallR",
   description:
     "Coming soon: nominate and vote on the best goals each month. Powered by Pixelot camera integration.",
+  openGraph: {
+    title: "Goal of the Month — BallR",
+    description: "Nominate and vote on the best goals each month.",
+    type: "website",
+    siteName: "BallR",
+  },
 };
 
 export default function GoalOfTheMonthPage() {
@@ -25,7 +31,7 @@ export default function GoalOfTheMonthPage() {
 
         {/* Preview section */}
         <div className="bg-surface border border-border/30 rounded-3xl p-8 sm:p-12 text-center">
-          <div className="text-6xl mb-6">ð¥</div>
+          <div className="text-6xl mb-6">🎥</div>
           <h2 className="text-2xl font-black mb-3">
             Pixelot Integration In Progress
           </h2>
@@ -38,17 +44,17 @@ export default function GoalOfTheMonthPage() {
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
             {[
               {
-                icon: "ð¹",
+                icon: "📹",
                 title: "Auto-Captured",
                 desc: "Pixelot cameras record every game",
               },
               {
-                icon: "ð³ï¸",
+                icon: "🗳️",
                 title: "Community Voted",
                 desc: "Players vote for the best goals",
               },
               {
-                icon: "ð",
+                icon: "🏆",
                 title: "Monthly Winners",
                 desc: "Top 3 goals published with video",
               },
@@ -72,7 +78,7 @@ export default function GoalOfTheMonthPage() {
                 className="bg-background border border-border/20 rounded-2xl aspect-video flex items-center justify-center"
               >
                 <div className="text-center">
-                  <div className="text-3xl mb-1">â½</div>
+                  <div className="text-3xl mb-1">⚽</div>
                   <div className="text-xs text-text-muted">{place}</div>
                 </div>
               </div>

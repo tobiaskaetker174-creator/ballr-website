@@ -39,7 +39,7 @@ export default function FeatureRequestPage() {
     return (
       <div className="pt-24 pb-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <div className="text-6xl mb-6">ð</div>
+          <div className="text-6xl mb-6">🎉</div>
           <h1 className="text-3xl font-black mb-4">Feature Request Submitted</h1>
           <p className="text-text-secondary">
             Thanks for the input. Our product team reviews every submission.

@@ -13,26 +13,26 @@ interface City {
 }
 
 const initialCities: City[] = [
-  { name: "Bangkok", country: "Thailand", votes: 156, flag: "ð¹ð­", launched: true, region: "Southeast Asia" },
-  { name: "Bali", country: "Indonesia", votes: 89, flag: "ð®ð©", launched: true, region: "Southeast Asia" },
-  { name: "London", country: "UK", votes: 143, flag: "ð¬ð§", launched: false, region: "Europe" },
-  { name: "Berlin", country: "Germany", votes: 134, flag: "ð©ðª", launched: false, region: "Europe" },
-  { name: "Madrid", country: "Spain", votes: 112, flag: "ðªð¸", launched: false, region: "Europe" },
-  { name: "Barcelona", country: "Spain", votes: 98, flag: "ðªð¸", launched: false, region: "Europe" },
-  { name: "Lisbon", country: "Portugal", votes: 87, flag: "ðµð¹", launched: false, region: "Europe" },
-  { name: "Buenos Aires", country: "Argentina", votes: 76, flag: "ð¦ð·", launched: false, region: "South America" },
-  { name: "Dubai", country: "UAE", votes: 65, flag: "ð¦ðª", launched: false, region: "Middle East" },
-  { name: "Singapore", country: "Singapore", votes: 58, flag: "ð¸ð¬", launched: false, region: "Southeast Asia" },
-  { name: "Manila", country: "Philippines", votes: 52, flag: "ðµð­", launched: false, region: "Southeast Asia" },
-  { name: "Jakarta", country: "Indonesia", votes: 47, flag: "ð®ð©", launched: false, region: "Southeast Asia" },
-  { name: "Ho Chi Minh City", country: "Vietnam", votes: 45, flag: "ð»ð³", launched: false, region: "Southeast Asia" },
-  { name: "Kuala Lumpur", country: "Malaysia", votes: 41, flag: "ð²ð¾", launched: false, region: "Southeast Asia" },
-  { name: "Chiang Mai", country: "Thailand", votes: 38, flag: "ð¹ð­", launched: false, region: "Southeast Asia" },
-  { name: "Phuket", country: "Thailand", votes: 35, flag: "ð¹ð­", launched: false, region: "Southeast Asia" },
-  { name: "Hanoi", country: "Vietnam", votes: 33, flag: "ð»ð³", launched: false, region: "Southeast Asia" },
-  { name: "Phnom Penh", country: "Cambodia", votes: 28, flag: "ð°ð­", launched: false, region: "Southeast Asia" },
-  { name: "Yangon", country: "Myanmar", votes: 22, flag: "ð²ð²", launched: false, region: "Southeast Asia" },
-  { name: "Vientiane", country: "Laos", votes: 15, flag: "ð±ð¦", launched: false, region: "Southeast Asia" },
+  { name: "Bangkok", country: "Thailand", votes: 156, flag: "🇹🇭", launched: true, region: "Southeast Asia" },
+  { name: "Bali", country: "Indonesia", votes: 89, flag: "🇮🇩", launched: true, region: "Southeast Asia" },
+  { name: "London", country: "UK", votes: 143, flag: "🇬🇧", launched: false, region: "Europe" },
+  { name: "Berlin", country: "Germany", votes: 134, flag: "🇩🇪", launched: false, region: "Europe" },
+  { name: "Madrid", country: "Spain", votes: 112, flag: "🇪🇸", launched: false, region: "Europe" },
+  { name: "Barcelona", country: "Spain", votes: 98, flag: "🇪🇸", launched: false, region: "Europe" },
+  { name: "Lisbon", country: "Portugal", votes: 87, flag: "🇵🇹", launched: false, region: "Europe" },
+  { name: "Buenos Aires", country: "Argentina", votes: 76, flag: "🇦🇷", launched: false, region: "South America" },
+  { name: "Dubai", country: "UAE", votes: 65, flag: "🇦🇪", launched: false, region: "Middle East" },
+  { name: "Singapore", country: "Singapore", votes: 58, flag: "🇸🇬", launched: false, region: "Southeast Asia" },
+  { name: "Manila", country: "Philippines", votes: 52, flag: "🇵🇭", launched: false, region: "Southeast Asia" },
+  { name: "Jakarta", country: "Indonesia", votes: 47, flag: "🇮🇩", launched: false, region: "Southeast Asia" },
+  { name: "Ho Chi Minh City", country: "Vietnam", votes: 45, flag: "🇻🇳", launched: false, region: "Southeast Asia" },
+  { name: "Kuala Lumpur", country: "Malaysia", votes: 41, flag: "🇲🇾", launched: false, region: "Southeast Asia" },
+  { name: "Chiang Mai", country: "Thailand", votes: 38, flag: "🇹🇭", launched: false, region: "Southeast Asia" },
+  { name: "Phuket", country: "Thailand", votes: 35, flag: "🇹🇭", launched: false, region: "Southeast Asia" },
+  { name: "Hanoi", country: "Vietnam", votes: 33, flag: "🇻🇳", launched: false, region: "Southeast Asia" },
+  { name: "Phnom Penh", country: "Cambodia", votes: 28, flag: "🇰🇭", launched: false, region: "Southeast Asia" },
+  { name: "Yangon", country: "Myanmar", votes: 22, flag: "🇲🇲", launched: false, region: "Southeast Asia" },
+  { name: "Vientiane", country: "Laos", votes: 15, flag: "🇱🇦", launched: false, region: "Southeast Asia" },
 ];
 
 export default function VotePage() {
@@ -205,7 +205,7 @@ export default function VotePage() {
                       : "bg-primary hover:bg-primary-dark text-text"
                   }`}
                 >
-                  {votedCities.has(city.name) ? "Voted â" : loading === city.name ? "..." : "Vote"}
+                  {votedCities.has(city.name) ? "Voted ✓" : loading === city.name ? "..." : "Vote"}
                 </button>
               )}
             </div>

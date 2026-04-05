@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 68" fill="none">
+  <defs>
+    <linearGradient id="ballr-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5A27"/>
+      <stop offset="100%" style="stop-color:#A1D494"/>
+    </linearGradient>
+  </defs>
+  <!-- Ball icon -->
+  <circle cx="28" cy="34" r="22" fill="url(#ballr-grad)"/>
+  <path d="M28 12 L28 56 M10 26 L46 26 M10 42 L46 42 M14 16 L42 52 M42 16 L14 52" stroke="#141312" stroke-width="1.5" opacity="0.3"/>
+  <!-- Text -->
+  <text x="60" y="46" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="38" fill="#E6E2DF" letter-spacing="-1">Ball</text>
+  <text x="148" y="46" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="38" fill="#A1D494" letter-spacing="-1">R</text>
+</svg>

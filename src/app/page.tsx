@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { LeagueCard } from "@/components/LeagueCard";
 import { LeagueFiltersBar } from "@/components/LeagueFilters";
+
+// Lazy load below-fold components
+const EloCalculator = dynamic(() => import("@/components/EloCalculator").then(mod => ({ default: mod.EloCalculator })), {
+  loading: () => <div className="h-96 bg-surface/50 animate-pulse rounded-2xl" />,
+});
 
 // Demo data for public leagues (will be replaced by Supabase queries)
 const featuredLeagues = [
@@ -131,15 +137,20 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section — League-first */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+        aria-label="Hero section - Create your football league"
+      >
         <Image
           src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=1920&q=80"
           alt="People playing football outdoors"
           fill
           className="object-cover"
           priority
+          quality={85}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/75 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/75 to-background" aria-hidden="true" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <div className="inline-block bg-surface border border-border/30 rounded-full px-4 py-1.5 mb-6">
@@ -162,13 +173,15 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/create"
-              className="bg-accent hover:bg-accent/90 text-background font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 duration-200 w-full sm:w-auto"
+              className="bg-accent hover:bg-accent/90 focus:bg-accent/90 focus:ring-4 focus:ring-accent/30 text-background font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 duration-200 w-full sm:w-auto focus:outline-none"
+              aria-label="Create your own football league"
             >
               🏆 Create Your League
             </Link>
             <a
               href="#leagues"
-              className="border border-border/50 hover:border-accent/50 text-text-secondary hover:text-text font-semibold px-8 py-4 rounded-2xl text-lg transition-all w-full sm:w-auto text-center"
+              className="border border-border/50 hover:border-accent/50 focus:border-accent focus:ring-4 focus:ring-accent/30 text-text-secondary hover:text-text focus:text-text font-semibold px-8 py-4 rounded-2xl text-lg transition-all w-full sm:w-auto text-center focus:outline-none"
+              aria-label="Browse existing football leagues"
             >
               Explore Leagues
             </a>
@@ -177,7 +190,7 @@ export default function HomePage() {
       </section>
 
       {/* How It Works — 3 Steps */}
-      <section className="py-24 bg-surface/50">
+      <section className="py-24 bg-surface/50" aria-label="How to create a league">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-black mb-4">
@@ -215,6 +228,53 @@ export default function HomePage() {
                 <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table - BallR vs Alternatives */}
+      <section className="py-24 bg-surface/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Why <span className="text-accent">BallR?</span>
+            </h2>
+            <p className="text-text-secondary max-w-xl mx-auto">
+              The first platform built for modern pickup football communities.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-surface border border-border/30 rounded-2xl overflow-hidden">
+              <thead>
+                <tr className="border-b border-border/30 bg-surface/50">
+                  <th className="px-6 py-4 text-left font-bold">Feature</th>
+                  <th className="px-6 py-4 text-center font-bold text-accent">BallR</th>
+                  <th className="px-6 py-4 text-center font-bold text-text-muted">WhatsApp Groups</th>
+                  <th className="px-6 py-4 text-center font-bold text-text-muted">Meetup.com</th>
+                  <th className="px-6 py-4 text-center font-bold text-text-muted">Facebook Events</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border/20">
+                {[
+                  { feature: "ELO Rating System", ballr: "✓", whatsapp: "✗", meetup: "✗", facebook: "✗" },
+                  { feature: "Auto Team Balancing", ballr: "✓", whatsapp: "✗", meetup: "✗", facebook: "✗" },
+                  { feature: "Built-in Payments", ballr: "✓", whatsapp: "Manual", meetup: "✗", facebook: "✗" },
+                  { feature: "Player Reliability Score", ballr: "✓", whatsapp: "✗", meetup: "✗", facebook: "✗" },
+                  { feature: "Season Tracking", ballr: "✓", whatsapp: "✗", meetup: "✗", facebook: "✗" },
+                  { feature: "Private/Public Leagues", ballr: "✓", whatsapp: "Private only", meetup: "Public only", facebook: "Public only" },
+                  { feature: "Cost", ballr: "Free", whatsapp: "Free", meetup: "$2-5/mo", facebook: "Free" },
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-surface/30 transition-colors">
+                    <td className="px-6 py-4 font-semibold text-sm">{row.feature}</td>
+                    <td className="px-6 py-4 text-center text-accent font-bold">{row.ballr}</td>
+                    <td className="px-6 py-4 text-center text-text-muted text-sm">{row.whatsapp}</td>
+                    <td className="px-6 py-4 text-center text-text-muted text-sm">{row.meetup}</td>
+                    <td className="px-6 py-4 text-center text-text-muted text-sm">{row.facebook}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -342,7 +402,7 @@ export default function HomePage() {
       </section>
 
       {/* Public Leagues — Browse & Filter */}
-      <section id="leagues" className="py-24">
+      <section id="leagues" className="py-24" aria-label="Browse public football leagues">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-black mb-4">
@@ -373,7 +433,7 @@ export default function HomePage() {
       </section>
 
       {/* Global Stats Ticker */}
-      <section className="py-12 border-y border-border/10">
+      <section className="py-12 border-y border-border/10" aria-label="Global BallR statistics">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
@@ -382,8 +442,8 @@ export default function HomePage() {
               { value: "350+", label: "Games Played", icon: "🏟️" },
               { value: "100%", label: "Community-Run", icon: "🤝" },
             ].map((s) => (
-              <div key={s.label}>
-                <div className="text-3xl mb-1">{s.icon}</div>
+              <div key={s.label} role="group" aria-label={`${s.value} ${s.label}`}>
+                <div className="text-3xl mb-1" aria-hidden="true">{s.icon}</div>
                 <div className="text-2xl sm:text-3xl font-black text-accent">{s.value}</div>
                 <div className="text-xs text-text-muted mt-1 uppercase tracking-wide">{s.label}</div>
               </div>
@@ -430,7 +490,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24">
+      <section className="py-24" aria-label="Player testimonials">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-black mb-4">
@@ -465,24 +525,32 @@ export default function HomePage() {
                 img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
               },
             ].map((t) => (
-              <div key={t.name} className="bg-surface border border-border/20 rounded-2xl p-6">
+              <article key={t.name} className="bg-surface border border-border/20 rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                    <Image src={t.img} alt={t.name} fill className="object-cover" />
+                    <Image 
+                      src={t.img} 
+                      alt={`${t.name} from ${t.city}`} 
+                      fill 
+                      className="object-cover"
+                      loading="lazy"
+                      quality={80}
+                      sizes="40px"
+                    />
                   </div>
                   <div>
                     <p className="text-sm font-bold">{t.name}</p>
                     <p className="text-xs text-text-muted">{t.city}</p>
                   </div>
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed mb-4 italic">
+                <blockquote className="text-text-secondary text-sm leading-relaxed mb-4 italic">
                   &ldquo;{t.quote}&rdquo;
-                </p>
+                </blockquote>
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-accent font-semibold">{t.league}</span>
                   <span className="text-text-muted">{t.members} members</span>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -609,15 +677,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Interactive ELO Calculator */}
+      <section className="py-24 bg-surface/50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              🎯 Calculate <span className="text-accent">Your ELO</span>
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Answer 4 quick questions and get your estimated starting ELO rating. See where you'd rank.
+            </p>
+          </div>
+          <EloCalculator />
+        </div>
+      </section>
+
       {/* CTA */}
-      <section id="download" className="relative py-24 overflow-hidden">
+      <section id="download" className="relative py-24 overflow-hidden" aria-label="Get started with BallR">
         <Image
           src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=1920&q=80"
           alt="Football boots on grass"
           fill
           className="object-cover"
+          loading="lazy"
+          quality={75}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-background/85" aria-hidden="true" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-5xl font-black mb-6">
             Ready to <span className="text-accent">Lead?</span>
@@ -628,13 +714,18 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/create"
-              className="bg-accent hover:bg-accent/90 text-background font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105"
+              className="bg-accent hover:bg-accent/90 focus:bg-accent/90 focus:ring-4 focus:ring-accent/30 text-background font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 focus:outline-none"
+              aria-label="Create your league now"
             >
               🏆 Create Your League
             </Link>
-            <a href="#" className="bg-primary hover:bg-primary-dark text-text font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 inline-flex items-center justify-center gap-3">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg>
-              Download App
+            <a 
+              href="https://app.ballr.club" 
+              className="bg-primary hover:bg-primary-dark focus:bg-primary-dark focus:ring-4 focus:ring-primary/30 text-text font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 inline-flex items-center justify-center gap-3 focus:outline-none"
+              aria-label="Download the BallR mobile app"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg>
+              Get the App
             </a>
           </div>
         </div>

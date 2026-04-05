@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Amateur Fussball Bangkok â Jetzt mitspielen | BallR",
+  title: "Amateur Fussball Bangkok — Jetzt mitspielen | BallR",
   description:
-    "Amateur Fussball in Bangkok. Finde Spiele fuer dein Level, melde dich an und spiele noch heute. BallR â die App fuer Hobbykicker.",
+    "Amateur Fussball in Bangkok. Finde Spiele fuer dein Level, melde dich an und spiele noch heute. BallR — die App fuer Hobbykicker.",
   keywords: [
     "Amateur Fussball Bangkok",
     "Hobbyfussball Bangkok",
@@ -24,7 +24,7 @@ export default function AmateurFussballBangkokAds() {
             <span className="text-accent">Bangkok</span>
           </h1>
           <p className="text-text-secondary text-lg max-w-xl mx-auto mb-6">
-            Hobbykicker? Finde Spiele auf deinem Level â jeden Tag.
+            Hobbykicker? Finde Spiele auf deinem Level — jeden Tag.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
@@ -68,7 +68,7 @@ export default function AmateurFussballBangkokAds() {
           {[
             "Spiele fuer Anfaenger bis Fortgeschrittene",
             "Faire Team-Aufteilung durch ELO-System",
-            "Keine Vereinspflicht â spiele wann du willst",
+            "Keine Vereinspflicht — spiele wann du willst",
             "Online zahlen, kein Bargeld noetig",
             "Freundliche internationale Community",
           ].map((benefit) => (
@@ -76,7 +76,7 @@ export default function AmateurFussballBangkokAds() {
               key={benefit}
               className="flex items-center gap-3 bg-surface border border-border/30 rounded-xl p-4"
             >
-              <span className="text-accent text-lg">â</span>
+              <span className="text-accent text-lg">✓</span>
               <span className="text-sm font-medium">{benefit}</span>
             </div>
           ))}
@@ -89,7 +89,7 @@ export default function AmateurFussballBangkokAds() {
             macht. Ich spiele jetzt regelmaessig und habe tolle Leute
             kennengelernt.&rdquo;
           </p>
-          <div className="text-sm font-bold">â Stefan, Hobbykicker aus Wien</div>
+          <div className="text-sm font-bold">— Stefan, Hobbykicker aus Wien</div>
         </div>
 
         {/* Contact / Signup Form */}

@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const data = cityData[slug];
   if (!data) return { title: "Not Found" };
   return {
-    title: `${data.name} Pickup Football Leagues â BallR`,
+    title: `${data.name} Pickup Football Leagues — BallR`,
     description: `Join ${data.stats.leagues} pickup football leagues in ${data.name}. ${data.stats.players} active players. Find games, track your Elo, play tonight.`,
     keywords: [`${data.name} pickup football`, `${data.name} football league`, `football ${data.name}`, `BallR ${data.name}`],
   };
@@ -53,12 +53,12 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
           <span className="text-text-muted text-sm">Follow BallR {data.name}:</span>
           {data.socials.instagram && (
             <a href={data.socials.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 bg-surface border border-border/20 rounded-lg px-3 py-1.5 hover:border-accent/40 transition-colors text-sm">
-              <span>ð¸</span> <span className="text-text-secondary">Instagram</span>
+              <span>📸</span> <span className="text-text-secondary">Instagram</span>
             </a>
           )}
           {data.socials.tiktok && (
             <a href={data.socials.tiktok} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 bg-surface border border-border/20 rounded-lg px-3 py-1.5 hover:border-accent/40 transition-colors text-sm">
-              <span>ðµ</span> <span className="text-text-secondary">TikTok</span>
+              <span>🎵</span> <span className="text-text-secondary">TikTok</span>
             </a>
           )}
         </div>
@@ -119,14 +119,14 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
                   </div>
                 ))}
                 <p className="text-text-muted text-xs mt-2">
-                  Want your own private league in {data.name}? <Link href="/leagues#start" className="text-accent hover:underline">Start one in 60 seconds â</Link>
+                  Want your own private league in {data.name}? <Link href="/leagues#start" className="text-accent hover:underline">Start one in 60 seconds →</Link>
                 </p>
               </div>
             </section>
 
             {/* City Organizer */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð¤ Your Organizer</h2>
+              <h2 className="text-xl font-black mb-4">👤 Your Organizer</h2>
               <div className="bg-surface border border-border/20 rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-accent/50">
@@ -147,7 +147,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Venues / Pitches */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð Where We Play</h2>
+              <h2 className="text-xl font-black mb-4">📍 Where We Play</h2>
               <div className="space-y-4">
                 {data.venues.map((venue) => (
                   <div key={venue.name} className="bg-surface border border-border/20 rounded-2xl overflow-hidden">
@@ -176,7 +176,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
               {/* Mini map placeholder */}
               <div className="mt-4 bg-[#0f1114] border border-border/20 rounded-2xl p-6 text-center">
-                <div className="text-text-muted text-sm mb-2">ð All venues on map</div>
+                <div className="text-text-muted text-sm mb-2">📍 All venues on map</div>
                 <div className="flex flex-wrap justify-center gap-3">
                   {data.venues.map((v) => (
                     <a
@@ -186,7 +186,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
                       rel="noopener noreferrer"
                       className="text-xs text-accent hover:underline bg-surface/50 rounded-lg px-3 py-1.5"
                     >
-                      {v.name} â
+                      {v.name} →
                     </a>
                   ))}
                 </div>
@@ -195,7 +195,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Player of the Month */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð Baller of the Month â {data.playerOfMonth.month}</h2>
+              <h2 className="text-xl font-black mb-4">🏆 Baller of the Month — {data.playerOfMonth.month}</h2>
               <div className="bg-gradient-to-r from-[#2D5A27]/20 to-surface rounded-2xl border border-[#2D5A27]/30 p-6">
                 <div className="flex items-center gap-4">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-accent">
@@ -215,7 +215,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               {/* Archive */}
               <details className="mt-4 group">
                 <summary className="text-sm text-accent cursor-pointer hover:underline flex items-center gap-1">
-                  <span className="group-open:rotate-90 transition-transform">â¶</span> View past Ballers of the Month
+                  <span className="group-open:rotate-90 transition-transform">▶</span> View past Ballers of the Month
                 </summary>
                 <div className="mt-3 space-y-2">
                   {data.playerOfMonthArchive.map((p) => (
@@ -240,11 +240,11 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Goal of the Month */}
             <section>
-              <h2 className="text-xl font-black mb-4">â½ Goal of the Month â {data.goalOfMonth.month}</h2>
+              <h2 className="text-xl font-black mb-4">⚽ Goal of the Month — {data.goalOfMonth.month}</h2>
               <div className="bg-surface border border-accent/20 rounded-2xl p-6">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center shrink-0">
-                    <span className="text-lg">ð¥</span>
+                    <span className="text-lg">🥅</span>
                   </div>
                   <div>
                     <p className="font-bold text-sm">{data.goalOfMonth.scorer}</p>
@@ -260,12 +260,12 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               {/* Archive */}
               <details className="mt-4 group">
                 <summary className="text-sm text-accent cursor-pointer hover:underline flex items-center gap-1">
-                  <span className="group-open:rotate-90 transition-transform">â¶</span> View past Goals of the Month
+                  <span className="group-open:rotate-90 transition-transform">▶</span> View past Goals of the Month
                 </summary>
                 <div className="mt-3 space-y-2">
                   {data.goalOfMonthArchive.map((g) => (
                     <div key={g.month} className="bg-surface border border-border/20 rounded-xl p-3 flex items-center gap-3">
-                      <span className="text-lg shrink-0">â½</span>
+                      <span className="text-lg shrink-0">⚽</span>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-bold">{g.scorer}</span>
@@ -282,7 +282,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
 
             {/* Blog links */}
             <section>
-              <h2 className="text-xl font-black mb-4">ð° Articles about {data.name}</h2>
+              <h2 className="text-xl font-black mb-4">📰 Articles about {data.name}</h2>
               <div className="space-y-2">
                 {data.blogLinks.map((link) => (
                   <Link key={link.href} href={link.href} className="block bg-surface border border-border/20 rounded-xl p-4 hover:border-accent/30 transition-colors group">
@@ -297,7 +297,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
           <div className="space-y-6">
             {/* CTAs */}
             <div className="bg-surface border border-accent/20 rounded-2xl p-6 text-center sticky top-24">
-              <a href="#" className="block bg-primary hover:bg-primary-dark text-text font-bold py-3 rounded-xl transition-colors mb-3 text-sm">
+              <a href="https://app.ballr.club" className="block bg-primary hover:bg-primary-dark text-text font-bold py-3 rounded-xl transition-colors mb-3 text-sm">
                 Join a {data.name} League
               </a>
               <Link href="/leagues#start" className="block border border-accent/40 hover:border-accent text-accent font-semibold py-3 rounded-xl transition-colors text-sm">
@@ -305,14 +305,14 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               </Link>
             </div>
 
-            {/* Full Leaderboard â Top 10 */}
+            {/* Full Leaderboard — Top 10 */}
             <div className="bg-surface border border-border/20 rounded-2xl p-6">
               <h3 className="text-sm font-black uppercase tracking-wider text-accent mb-4">{data.name} Top 10</h3>
               <div className="space-y-2">
                 {data.leaderboard.map((player) => (
                   <div key={player.rank} className={`flex items-center gap-2 ${player.rank <= 3 ? "py-1" : ""}`}>
                     <span className="text-text-muted text-xs w-5 font-mono text-right">{player.rank}</span>
-                    <span className="text-sm w-5 text-center">{player.rank <= 3 ? ["ð¥", "ð¥", "ð¥"][player.rank - 1] : ""}</span>
+                    <span className="text-sm w-5 text-center">{player.rank <= 3 ? ["🥇", "🥈", "🥉"][player.rank - 1] : ""}</span>
                     <span className={`text-sm flex-1 ${player.rank <= 3 ? "font-bold" : ""}`}>{player.name}</span>
                     <span className="text-xs text-accent font-bold">{player.elo}</span>
                   </div>
@@ -326,7 +326,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
               <div className="space-y-2">
                 {data.socials.instagram && (
                   <a href={data.socials.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-lg hover:bg-primary/10 transition-colors">
-                    <span className="text-lg">ð¸</span>
+                    <span className="text-lg">📸</span>
                     <div>
                       <p className="text-sm font-semibold">Instagram</p>
                       <p className="text-xs text-text-muted">@ballr.{data.slug}</p>
@@ -335,7 +335,7 @@ export default async function CityLeaguePage({ params }: { params: Promise<{ cit
                 )}
                 {data.socials.tiktok && (
                   <a href={data.socials.tiktok} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-lg hover:bg-primary/10 transition-colors">
-                    <span className="text-lg">ðµ</span>
+                    <span className="text-lg">🎵</span>
                     <div>
                       <p className="text-sm font-semibold">TikTok</p>
                       <p className="text-xs text-text-muted">@ballr.{data.slug}</p>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Fussball spielen in Bangkok â Der komplette Guide 2026 | BallR",
+  title: "Fussball spielen in Bangkok — Der komplette Guide 2026 | BallR",
   description:
     "Fussball spielen in Bangkok: Alles was du wissen musst. Spielorte, Kosten, Formate und wie du mit BallR sofort loslegen kannst. Dein Guide fuer 2026.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Kicken Bangkok",
   ],
   openGraph: {
-    title: "Fussball spielen in Bangkok â Der komplette Guide 2026 | BallR",
+    title: "Fussball spielen in Bangkok — Der komplette Guide 2026 | BallR",
     description:
       "Fussball spielen in Bangkok: Alles was du wissen musst. Spielorte, Kosten, Formate und wie du sofort loslegen kannst.",
     type: "website",
@@ -35,7 +35,7 @@ export default function FussballSpielenBangkokSEO() {
           </h1>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             Dein kompletter Guide fuer 2026: Wo, wann und wie du in Bangkok
-            Fussball spielen kannst â ob Expat, Tourist oder Einheimischer.
+            Fussball spielen kannst — ob Expat, Tourist oder Einheimischer.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function FussballSpielenBangkokSEO() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-6 left-6 text-white">
             <p className="text-sm font-medium opacity-80">
-              Bangkok â eine der aktivsten Fussball-Staedte Suedostasiens
+              Bangkok — eine der aktivsten Fussball-Staedte Suedostasiens
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function FussballSpielenBangkokSEO() {
         <article className="prose-invert max-w-none space-y-12">
           <section>
             <h2 className="text-2xl font-black mb-4">
-              Fussball in Bangkok â Ein Ueberblick
+              Fussball in Bangkok — Ein Ueberblick
             </h2>
             <p className="text-text-secondary leading-relaxed">
               Bangkok ist eine der besten Staedte in Suedostasien, um Fussball
@@ -70,7 +70,7 @@ export default function FussballSpielenBangkokSEO() {
             </p>
             <p className="text-text-secondary leading-relaxed mt-4">
               Egal ob du ein erfahrener Spieler bist oder zum ersten Mal auf
-              dem Platz stehst â Bangkok hat fuer jeden das Richtige. Die
+              dem Platz stehst — Bangkok hat fuer jeden das Richtige. Die
               Fussball-Community ist vielfaeltig, international und
               einladend.
             </p>
@@ -159,7 +159,7 @@ export default function FussballSpielenBangkokSEO() {
 
           <section>
             <h2 className="text-2xl font-black mb-4">
-              BallR â Die einfachste Art, Fussball zu spielen
+              BallR — Die einfachste Art, Fussball zu spielen
             </h2>
             <p className="text-text-secondary leading-relaxed mb-6">
               BallR buendelt alle verfuegbaren Spiele in einer App. Statt
@@ -168,22 +168,22 @@ export default function FussballSpielenBangkokSEO() {
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               <FeatureCard
-                icon="ð"
+                icon="🔍"
                 title="Spiele finden"
-                description="Alle verfuegbaren Spiele in Bangkok auf einen Blick â gefiltert nach deinen Praeferenzen."
+                description="Alle verfuegbaren Spiele in Bangkok auf einen Blick — gefiltert nach deinen Praeferenzen."
               />
               <FeatureCard
-                icon="â¡"
+                icon="⚡"
                 title="Sofort buchen"
                 description="In wenigen Sekunden angemeldet und bezahlt. Keine komplizierten Prozesse."
               />
               <FeatureCard
-                icon="ð"
+                icon="📊"
                 title="ELO-Rating"
                 description="Baue dein persoenliches Rating auf und sieh, wie du dich verbesserst."
               />
               <FeatureCard
-                icon="ð"
+                icon="🏆"
                 title="Leaderboard"
                 description="Miss dich mit anderen Spielern und klettere in der Rangliste nach oben."
               />
@@ -196,18 +196,18 @@ export default function FussballSpielenBangkokSEO() {
             </h2>
             <div className="space-y-3">
               {[
-                "Trinke viel Wasser â die Hitze und Luftfeuchtigkeit sind nicht zu unterschaetzen",
+                "Trinke viel Wasser — die Hitze und Luftfeuchtigkeit sind nicht zu unterschaetzen",
                 "Trage Kunstrasen-Schuhe (TF/Turf) fuer die meisten Plaetze",
                 "Bringe ein Handtuch und Wechselkleidung mit",
-                "Plane mit dem BTS/MRT â Parkplaetze sind oft begrenzt",
-                "Abendspiele (18-22 Uhr) sind am beliebtesten â frueh buchen!",
+                "Plane mit dem BTS/MRT — Parkplaetze sind oft begrenzt",
+                "Abendspiele (18-22 Uhr) sind am beliebtesten — frueh buchen!",
                 "Schienbeinschoner sind bei den meisten organisierten Spielen Pflicht",
               ].map((tip) => (
                 <div
                   key={tip}
                   className="flex items-start gap-3 text-text-secondary text-sm"
                 >
-                  <span className="text-accent mt-0.5">â</span>
+                  <span className="text-accent mt-0.5">→</span>
                   <span>{tip}</span>
                 </div>
               ))}

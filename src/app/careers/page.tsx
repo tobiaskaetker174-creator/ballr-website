@@ -37,7 +37,7 @@ export default function CareersPage() {
               <h2 className="text-2xl font-black mb-4">Become a BallR Organizer</h2>
               <p className="text-text-secondary leading-relaxed mb-6">
                 Run pickup games in your city using the BallR platform. You
-                handle the venue and the vibe â we handle the tech, payments,
+                handle the venue and the vibe — we handle the tech, payments,
                 team balancing, and player ratings. It&apos;s like being a
                 football god, but with less paperwork.
               </p>
@@ -59,7 +59,7 @@ export default function CareersPage() {
                     "Marketing support from BallR HQ",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <span className="text-accent mt-0.5">â</span>
+                      <span className="text-accent mt-0.5">✓</span>
                       {item}
                     </li>
                   ))}
@@ -107,7 +107,7 @@ function OrganizerForm() {
   if (submitted) {
     return (
       <div className="bg-surface border border-accent/30 rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-3">â</div>
+        <div className="text-4xl mb-3">✅</div>
         <h3 className="text-lg font-bold mb-2">Application Submitted</h3>
         <p className="text-text-secondary text-sm">We&apos;ll review your application and get back to you within a few days.</p>
       </div>
@@ -152,7 +152,7 @@ function FranchiseForm() {
   if (submitted) {
     return (
       <div className="bg-surface border border-accent/30 rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-3">â</div>
+        <div className="text-4xl mb-3">✅</div>
         <h3 className="text-lg font-bold mb-2">Inquiry Submitted</h3>
         <p className="text-text-secondary text-sm">Our franchise team will reach out to discuss next steps.</p>
       </div>

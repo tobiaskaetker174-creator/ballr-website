@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Team Balancing in Casual Soccer: Why It Matters â BallR Blog",
+  title: "Team Balancing in Casual Soccer: Why It Matters — BallR Blog",
   description:
     "How ELO ratings, snake drafts, and swap algorithms create fairer pickup football games. Learn why captain picks fail and how BallR auto-balances teams.",
   keywords: [

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Expat Football in Bangkok â Join the Community | BallR",
+  title: "Expat Football in Bangkok — Join the Community | BallR",
   description:
     "New to Bangkok? Find expat football games organized through BallR. Skill-matched, fair teams, online payments. Your new football community awaits.",
   keywords: [
@@ -53,7 +53,7 @@ export default function ExpatFootballBangkok() {
               {[
                 {
                   title: "No Language Barrier",
-                  desc: "The app handles everything â booking, payments, team assignment. Just show up and play.",
+                  desc: "The app handles everything — booking, payments, team assignment. Just show up and play.",
                 },
                 {
                   title: "Meet People Instantly",
@@ -61,7 +61,7 @@ export default function ExpatFootballBangkok() {
                 },
                 {
                   title: "Play at Your Level",
-                  desc: "Beginner, intermediate, or advanced â filter games by skill level so you always have a good time.",
+                  desc: "Beginner, intermediate, or advanced — filter games by skill level so you always have a good time.",
                 },
                 {
                   title: "Reliable Players",
@@ -69,7 +69,7 @@ export default function ExpatFootballBangkok() {
                 },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
-                  <span className="text-accent mt-1">â</span>
+                  <span className="text-accent mt-1">✓</span>
                   <div>
                     <div className="font-bold text-sm">{item.title}</div>
                     <div className="text-text-secondary text-sm">
@@ -129,7 +129,7 @@ export default function ExpatFootballBangkok() {
             href="/#download"
             className="inline-block bg-primary hover:bg-primary-dark text-text font-bold px-8 py-3 rounded-xl transition-colors"
           >
-            Download BallR â It&apos;s Free
+            Download BallR — It&apos;s Free
           </a>
         </div>
       </div>
