@@ -692,6 +692,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Waitlist / Early Access */}
+      <section className="py-16 px-4 sm:px-6" aria-labelledby="waitlist-heading">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 id="waitlist-heading" className="text-2xl sm:text-3xl font-bold">
+            🌍 Coming to Your City
+          </h2>
+          <p className="text-text-secondary mt-3 max-w-lg mx-auto">
+            BallR is expanding. Join the waitlist to get early access when we launch in your area. Be the first league founder in your city.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 mt-6 max-w-md mx-auto">
+            <input type="email" placeholder="your@email.com" className="flex-1 px-4 py-3 bg-primary border border-primary-dark rounded-xl text-text placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Email for waitlist" />
+            <button className="px-6 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-xl transition-all hover:scale-105 whitespace-nowrap">Join Waitlist</button>
+          </div>
+          <p className="text-text-secondary text-xs mt-3">1,200+ players on the waitlist · Launching in 5 new cities Q2 2026</p>
+        </div>
+      </section>
+
+      {/* League Types Grid */}
+      <section className="py-16 px-4 sm:px-6 bg-primary" aria-labelledby="league-types-heading">
+        <div className="max-w-5xl mx-auto">
+          <h2 id="league-types-heading" className="text-2xl font-bold text-center mb-8">Every Format. Every Level.</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { emoji: '⚽', name: '5v5', desc: 'Fast & technical' },
+              { emoji: '🏟️', name: '7v7', desc: 'Best of both worlds' },
+              { emoji: '🔥', name: '8v8', desc: 'Most popular' },
+              { emoji: '⭐', name: '11v11', desc: 'Full pitch glory' },
+              { emoji: '🏖️', name: 'Beach', desc: 'Sand & skill' },
+              { emoji: '🌙', name: 'Night', desc: 'Floodlit games' },
+              { emoji: '👶', name: 'Beginner', desc: 'No judgment zone' },
+              { emoji: '🏆', name: 'Competitive', desc: 'Bring your A-game' },
+            ].map(({ emoji, name, desc }) => (
+              <div key={name} className="p-4 bg-background border border-primary-dark rounded-xl text-center hover:border-accent/50 transition-colors">
+                <div className="text-2xl mb-1" aria-hidden="true">{emoji}</div>
+                <div className="font-semibold text-text">{name}</div>
+                <div className="text-text-secondary text-xs mt-1">{desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "BallR",
+            "applicationCategory": "SportsApplication",
+            "operatingSystem": "iOS, Android, Web",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Find pickup football games, join with one tap, play with fair ELO-balanced teams. Live in Bangkok & Bali.",
+            "url": "https://ballr-website-v2.vercel.app",
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "87" }
+          })
+        }}
+      />
+
       {/* CTA */}
       <section id="download" className="relative py-24 overflow-hidden" aria-label="Get started with BallR">
         <Image
