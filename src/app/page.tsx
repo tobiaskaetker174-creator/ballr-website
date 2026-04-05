@@ -488,6 +488,97 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Safety & Fair Play Section */}
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              ⚖️ Safety & <span className="text-accent">Fair Play</span>
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">We protect the community. Verified players, anti-toxicity policies, and player insurance.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {[
+              {
+                icon: "✅",
+                title: "Verified Players",
+                desc: "All players verified via email or phone. Prevents fake accounts and maintains community trust.",
+              },
+              {
+                icon: "🚫",
+                title: "Anti-Toxicity Policy",
+                desc: "Zero tolerance for abuse, racism, sexism. Report & block features. Violators banned permanently.",
+              },
+              {
+                icon: "🛡️",
+                title: "Player Insurance",
+                desc: "Every organized game is covered by liability insurance. Play with confidence.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-surface border border-border/20 rounded-2xl p-8 hover:border-accent/30 transition-all">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-accent/10 border border-accent/20 rounded-2xl p-8 text-center">
+            <p className="text-sm font-bold text-accent uppercase tracking-wide mb-2">Community-First Values</p>
+            <p className="text-text-secondary">We're built by players, for players. Your safety and fair play are never negotiable.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Player Count Ticker */}
+      <section className="py-16 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 border-y border-accent/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-surface border border-accent/20 rounded-full mb-6">
+            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-sm font-semibold text-text">Live Right Now</span>
+          </div>
+          <div className="text-5xl sm:text-7xl font-black text-accent mb-3">
+            527<span className="text-3xl sm:text-4xl">+</span>
+          </div>
+          <p className="text-text-secondary text-lg">Players Active Across All Leagues</p>
+          <p className="text-text-muted text-sm mt-2">From Bangkok to Berlin. New players joining every day.</p>
+        </div>
+      </section>
+
+      {/* City Expansion Roadmap */}
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              🌍 Expansion <span className="text-accent">Roadmap</span>
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">We're growing. Here's where we're headed next.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { city: "Bangkok", country: "🇹🇭", status: "✅ Live", quarter: "Now", players: "340+", color: "border-green-500/50" },
+              { city: "Bali", country: "🇮🇩", status: "✅ Live", quarter: "Now", players: "87+", color: "border-green-500/50" },
+              { city: "Singapore", country: "🇸🇬", status: "📍 Q2", quarter: "Q2 2026", players: "Coming", color: "border-blue-500/50" },
+              { city: "Kuala Lumpur", country: "🇲🇾", status: "📍 Q3", quarter: "Q3 2026", players: "Coming", color: "border-blue-500/50" },
+              { city: "Ho Chi Minh", country: "🇻🇳", status: "📍 Q4", quarter: "Q4 2026", players: "Coming", color: "border-blue-500/50" },
+            ].map((city, i) => (
+              <div key={i} className={`bg-surface border ${city.color} rounded-2xl p-6 text-center hover:scale-105 transition-transform`}>
+                <div className="text-3xl mb-2">{city.country}</div>
+                <h3 className="font-bold text-lg mb-1">{city.city}</h3>
+                <p className="text-xs text-accent font-semibold uppercase tracking-wide mb-3">{city.status}</p>
+                <div className="bg-surface/50 rounded-lg p-3 mb-3">
+                  <p className="text-xs text-text-muted mb-1">Target</p>
+                  <p className="font-bold text-sm">{city.players}</p>
+                </div>
+                <p className="text-[11px] text-text-muted">{city.quarter}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How ELO Works - Interactive Explainer */}
       <section className="py-16 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
