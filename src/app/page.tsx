@@ -709,6 +709,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Upcoming Games Feed */}
+      <section className="py-16 px-4 sm:px-6" aria-label="Upcoming games">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-black text-center mb-2">🔴 Live: Upcoming Games</h2>
+          <p className="text-text-secondary text-center mb-8 text-sm">Real games happening this week across BallR leagues</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { league: 'Bangkok Ballers', format: '7v7', when: 'Today 6PM', spots: 3, location: 'Thonglor FC', emoji: '🇹🇭' },
+              { league: 'Kreuzberg Kickers', format: '5v5', when: 'Tomorrow 7PM', spots: 1, location: 'Görlitzer Park', emoji: '🇩🇪' },
+              { league: 'Bali Beach FC', format: '8v8', when: 'Sunday 5PM', spots: 6, location: 'Canggu Beach', emoji: '🇮🇩' },
+              { league: 'Singapore Lions', format: '7v7', when: 'Saturday 9AM', spots: 4, location: 'Padang Field', emoji: '🇸🇬' },
+              { league: 'Bangkok Ballers', format: '5v5', when: 'Wednesday 8PM', spots: 2, location: 'Sukhumvit Arena', emoji: '🇹🇭' },
+              { league: 'Bali Beach FC', format: '6v6', when: 'Friday 4PM', spots: 5, location: 'Seminyak Sports', emoji: '🇮🇩' },
+            ].map((game, i) => (
+              <div key={i} className="bg-surface border border-border/20 rounded-xl p-4 hover:border-accent/30 transition-all hover:scale-[1.02]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-lg">{game.emoji}</span>
+                  <span className="text-[10px] px-2 py-0.5 bg-accent/10 text-accent rounded-full font-semibold">{game.format}</span>
+                </div>
+                <h3 className="font-bold text-sm text-text">{game.league}</h3>
+                <p className="text-xs text-text-muted mt-1">📍 {game.location}</p>
+                <div className="flex items-center justify-between mt-3">
+                  <span className="text-xs text-text-secondary">🕐 {game.when}</span>
+                  <span className="text-xs font-semibold text-green-400">{game.spots} spots left</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* App Store Download Buttons */}
+      <section className="py-16 px-4 sm:px-6 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10" aria-label="Download the BallR app">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-black mb-3">Ready to Play? 🎯</h2>
+          <p className="text-text-secondary mb-8 max-w-md mx-auto">Download BallR and find your next game in under 60 seconds.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <button className="flex items-center gap-3 px-6 py-3 bg-surface hover:bg-surface/80 rounded-xl border border-border/30 transition-all hover:scale-105 hover:border-accent/30">
+              <svg className="w-7 h-7 text-text" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg>
+              <div className="text-left"><p className="text-[10px] text-text-muted">Download on the</p><p className="font-semibold text-sm text-text">App Store</p></div>
+            </button>
+            <button className="flex items-center gap-3 px-6 py-3 bg-surface hover:bg-surface/80 rounded-xl border border-border/30 transition-all hover:scale-105 hover:border-accent/30">
+              <svg className="w-7 h-7 text-text" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 13l2.302-2.492zM5.864 2.658L16.8 8.991l-2.302 2.302L5.864 2.658z" /></svg>
+              <div className="text-left"><p className="text-[10px] text-text-muted">Get it on</p><p className="font-semibold text-sm text-text">Google Play</p></div>
+            </button>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
+            <span>⚽ 5,000+ players</span>
+            <span>🏆 200+ leagues</span>
+            <span>��� 15 cities</span>
+            <span>⭐ 4.8 rating</span>
+          </div>
+        </div>
+      </section>
+
       {/* League Types Grid */}
       <section className="py-16 px-4 sm:px-6 bg-primary" aria-labelledby="league-types-heading">
         <div className="max-w-5xl mx-auto">
