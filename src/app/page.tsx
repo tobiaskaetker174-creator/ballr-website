@@ -219,6 +219,128 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 🏅 Player Spotlight Section */}
+      <section className="py-24 bg-gradient-to-b from-surface/50 to-transparent">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              🏅 <span className="text-accent">Player Spotlight</span>
+            </h2>
+            <p className="text-text-secondary max-w-xl mx-auto">
+              Meet the legends who are dominating their leagues worldwide.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Marco D.",
+                elo: 1487,
+                games: 52,
+                winRate: 67,
+                quote: "BallR made Bangkok feel like home",
+                city: "Bangkok",
+              },
+              {
+                name: "Sofia R.",
+                elo: 1523,
+                games: 78,
+                winRate: 71,
+                quote: "Finally, a league that rewards consistency",
+                city: "Berlin",
+              },
+              {
+                name: "Lucas M.",
+                elo: 1401,
+                games: 45,
+                winRate: 64,
+                quote: "The ELO system keeps everyone competitive",
+                city: "Rio de Janeiro",
+              },
+            ].map((player) => (
+              <div
+                key={player.name}
+                className="relative bg-surface border-2 border-transparent rounded-2xl p-8 overflow-hidden hover:scale-105 transition-transform"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, rgba(161, 212, 148, 0.1), rgba(90, 164, 230, 0.1)), linear-gradient(white, white)`,
+                  backgroundClip: "padding-box",
+                  border: "2px solid transparent",
+                  backgroundOrigin: "border-box",
+                }}
+              >
+                {/* Gradient border effect */}
+                <div
+                  className="absolute inset-0 rounded-2xl -z-10"
+                  style={{
+                    background: `linear-gradient(135deg, #A1D494 0%, #5BA4E6 100%)`,
+                    opacity: 0.2,
+                  }}
+                />
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <h3 className="text-xl font-black">{player.name}</h3>
+                      <p className="text-sm text-text-muted">{player.city}</p>
+                    </div>
+                    <div className="text-3xl">⚽</div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-surface/50 rounded-xl">
+                    <div className="text-center">
+                      <div className="text-2xl font-black text-accent">{player.elo}</div>
+                      <div className="text-xs text-text-muted uppercase tracking-wide mt-1">ELO</div>
+                    </div>
+                    <div className="text-center border-l border-r border-border/30">
+                      <div className="text-2xl font-black text-accent">{player.games}</div>
+                      <div className="text-xs text-text-muted uppercase tracking-wide mt-1">Games</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-black text-accent">{player.winRate}%</div>
+                      <div className="text-xs text-text-muted uppercase tracking-wide mt-1">Win Rate</div>
+                    </div>
+                  </div>
+
+                  <p className="text-text-secondary italic text-sm leading-relaxed">
+                    &ldquo;{player.quote}&rdquo;
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 📊 This Week on BallR — Live Stats Banner */}
+      <section className="py-6 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-y border-accent/20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center sm:text-left">
+            <div className="text-sm font-semibold text-accent uppercase tracking-widest">📊 This Week on BallR</div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-text-secondary">
+              <span className="flex items-center gap-1">
+                <span className="text-lg">🎮</span>
+                <span className="font-semibold">12 games played</span>
+              </span>
+              <span className="hidden sm:inline text-accent">·</span>
+              <span className="flex items-center gap-1">
+                <span className="text-lg">👥</span>
+                <span className="font-semibold">94 players matched</span>
+              </span>
+              <span className="hidden sm:inline text-accent">·</span>
+              <span className="flex items-center gap-1">
+                <span className="text-lg">🌍</span>
+                <span className="font-semibold">3 cities active</span>
+              </span>
+              <span className="hidden sm:inline text-accent">·</span>
+              <span className="flex items-center gap-1">
+                <span className="text-lg">📊</span>
+                <span className="font-semibold">avg team diff: 12 ELO pts</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Public Leagues — Browse & Filter */}
       <section id="leagues" className="py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
