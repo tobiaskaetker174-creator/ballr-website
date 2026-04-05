@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/leagues", label: "Leagues" },
   { href: "/create", label: "Create League" },
   { href: "/different", label: "Why BallR" },
+  { href: "/city-guide", label: "City Guides" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];

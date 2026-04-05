@@ -37,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/leagues/bali',
   ];
 
+  const cityGuidePages = [
+    '/city-guide',
+    '/city-guide/bangkok',
+    '/city-guide/berlin',
+    '/city-guide/bali',
+  ];
+
   const seoPages = [
     '/seo/amateur-fussball-bangkok',
     '/seo/expat-fussball-bangkok',
@@ -58,6 +65,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     })),
     ...cityPages.map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...cityGuidePages.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
