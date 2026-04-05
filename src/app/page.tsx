@@ -366,6 +366,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How ELO Works - Interactive Explainer */}
+      <section className="py-16 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Your <span className="text-accent">ELO Journey</span>
+            </h2>
+            <p className="text-text-secondary max-w-lg mx-auto">Every game tells a story. Here&apos;s how your rating evolves.</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-4">
+            {[
+              { elo: '1000', label: 'First Game', desc: 'Everyone starts here. Fair and equal.', emoji: '🌱', color: 'border-green-500/30' },
+              { elo: '1150', label: '10 Games In', desc: 'Algorithm learns your style. Rating stabilizes.', emoji: '📈', color: 'border-blue-500/30' },
+              { elo: '1350', label: 'League Regular', desc: 'Consistent player. Teams want you.', emoji: '⭐', color: 'border-yellow-500/30' },
+              { elo: '1500+', label: 'Top Tier', desc: 'Elite status. Your presence balances any team.', emoji: '👑', color: 'border-accent/50' },
+            ].map((stage) => (
+              <div key={stage.label} className={`bg-surface border ${stage.color} rounded-2xl p-6 text-center hover:scale-105 transition-transform`}>
+                <div className="text-3xl mb-3">{stage.emoji}</div>
+                <div className="text-2xl font-black text-accent mb-1">{stage.elo}</div>
+                <div className="text-sm font-bold mb-2">{stage.label}</div>
+                <p className="text-xs text-text-secondary">{stage.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-text-muted mt-6">
+            Based on the Glicko-2 system, adapted for team sports. Win against higher-rated opponents → bigger gains.
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section id="download" className="relative py-24 overflow-hidden">
         <Image
