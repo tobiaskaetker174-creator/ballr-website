@@ -183,9 +183,9 @@ export default function VotePage() {
                     </span>
                   )}
                 </div>
-                <div className="h-1.5 bg-surface-light rounded-full overflow-hidden">
+                <div className="h-2 bg-surface-light rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-accent rounded-full transition-all duration-500"
+                    className="h-full bg-accent rounded-full transition-all duration-700 ease-out"
                     style={{ width: `${(city.votes / maxVotes) * 100}%` }}
                   />
                 </div>

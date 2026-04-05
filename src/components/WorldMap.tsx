@@ -103,6 +103,7 @@ export function WorldMap() {
             style={{ left: `${city.x}%`, top: `${city.y}%`, transform: "translate(-50%, -50%)" }}
             onMouseEnter={() => setHoveredCity(city)}
             onMouseLeave={() => setHoveredCity(null)}
+            onClick={() => setHoveredCity(hoveredCity?.name === city.name ? null : city)}
           >
             {/* Pulse ring for live games */}
             {city.hasLiveGame && (

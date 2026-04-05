@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface AccordionItemProps {
   title: string;
@@ -14,12 +14,36 @@ export function AccordionItem({
   defaultOpen = false,
 }: AccordionItemProps) {
   const [open, setOpen] = useState(defaultOpen);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<number | undefined>(defaultOpen ? undefined : 0);
+
+  useEffect(() => {
+    if (open) {
+      const el = contentRef.current;
+      if (el) {
+        setHeight(el.scrollHeight);
+        // After transition, set to auto for dynamic content
+        const timeout = setTimeout(() => setHeight(undefined), 300);
+        return () => clearTimeout(timeout);
+      }
+    } else {
+      // First set explicit height, then collapse to 0
+      const el = contentRef.current;
+      if (el) {
+        setHeight(el.scrollHeight);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => setHeight(0));
+        });
+      }
+    }
+  }, [open]);
 
   return (
-    <div className="border border-border/30 rounded-2xl overflow-hidden bg-surface">
+    <div className={`border rounded-2xl overflow-hidden bg-surface transition-colors duration-300 ${open ? "border-accent/30" : "border-border/30"}`}>
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-surface-light/50 transition-colors"
+        aria-expanded={open}
       >
         <span className="text-lg font-semibold text-text pr-4">{title}</span>
         <svg
@@ -39,9 +63,9 @@ export function AccordionItem({
         </svg>
       </button>
       <div
-        className={`transition-all duration-300 overflow-hidden ${
-          open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        ref={contentRef}
+        className="transition-all duration-300 ease-in-out overflow-hidden"
+        style={{ height: height !== undefined ? `${height}px` : "auto", opacity: open ? 1 : 0 }}
       >
         <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-text-secondary leading-relaxed">
           {children}

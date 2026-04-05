@@ -230,14 +230,19 @@ export function CreateLeagueForm() {
 
         {/* Submit */}
         <button
-          className="w-full font-bold py-4 rounded-xl text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full font-bold py-4 rounded-xl text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]"
           style={{ backgroundColor: accentColor, color: primaryColor }}
           disabled={!name.trim()}
+          onClick={() => {
+            if (name.trim()) {
+              window.location.href = "https://app.ballr.club";
+            }
+          }}
         >
           🏆 Create League
         </button>
         <p className="text-xs text-text-muted text-center">
-          You&apos;ll get an invite code to share with your crew. You can change everything later.
+          You&apos;ll be redirected to the app to finalize your league. You can change everything later.
         </p>
       </div>
     </div>

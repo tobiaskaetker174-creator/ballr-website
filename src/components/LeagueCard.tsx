@@ -5,7 +5,7 @@ export function LeagueCard({ league }: { league: League }) {
   return (
     <Link
       href={`/league/${league.slug}`}
-      className="bg-surface border border-border/20 rounded-2xl overflow-hidden hover:border-accent/30 transition-all group block"
+      className="bg-surface border border-border/20 rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-300 group block hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20"
     >
       {/* Color banner */}
       <div

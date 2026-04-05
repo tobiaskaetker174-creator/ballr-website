@@ -100,9 +100,21 @@ export function Footer() {
           <p className="text-text-muted text-xs">
             &copy; {new Date().getFullYear()} BallR. All rights reserved.
           </p>
-          <p className="text-text-muted text-xs">
-            Made with questionable amounts of coffee in Bangkok.
-          </p>
+          <div className="flex items-center gap-6">
+            <p className="text-text-muted text-xs">
+              Made with questionable amounts of coffee in Bangkok.
+            </p>
+            <a
+              href="#main-content"
+              className="text-text-muted hover:text-accent transition-colors p-1.5 rounded-lg border border-border/20 hover:border-accent/30"
+              aria-label="Back to top"
+              title="Back to top"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

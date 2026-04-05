@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/create"
-              className="bg-accent hover:bg-accent/90 focus:bg-accent/90 focus:ring-4 focus:ring-accent/30 text-background font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 duration-200 w-full sm:w-auto focus:outline-none"
+              className="bg-accent hover:bg-accent/90 focus:bg-accent/90 focus:ring-4 focus:ring-accent/30 text-background font-bold px-8 py-4 rounded-2xl text-lg transition-all hover:scale-105 active:scale-95 duration-200 w-full sm:w-auto focus:outline-none"
               aria-label="Create your own football league"
             >
               🏆 Create Your League
@@ -244,8 +244,9 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full bg-surface border border-border/30 rounded-2xl overflow-hidden">
+          <p className="text-center text-xs text-text-muted mb-3 sm:hidden">← Swipe to compare →</p>
+          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[640px] bg-surface border border-border/30 rounded-2xl overflow-hidden">
               <thead>
                 <tr className="border-b border-border/30 bg-surface/50">
                   <th className="px-6 py-4 text-left font-bold">Feature</th>
@@ -702,8 +703,8 @@ export default function HomePage() {
             BallR is expanding. Join the waitlist to get early access when we launch in your area. Be the first league founder in your city.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mt-6 max-w-md mx-auto">
-            <input type="email" placeholder="your@email.com" className="flex-1 px-4 py-3 bg-primary border border-primary-dark rounded-xl text-text placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Email for waitlist" />
-            <button className="px-6 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-xl transition-all hover:scale-105 whitespace-nowrap">Join Waitlist</button>
+            <input type="email" placeholder="your@email.com" className="flex-1 px-4 py-3 bg-primary border border-primary-dark rounded-xl text-text placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent/50" aria-label="Email for waitlist" />
+            <button className="px-6 py-3 bg-accent hover:bg-accent/90 active:scale-95 text-background font-semibold rounded-xl transition-all hover:scale-105 whitespace-nowrap">Join Waitlist</button>
           </div>
           <p className="text-text-secondary text-xs mt-3">1,200+ players on the waitlist · Launching in 5 new cities Q2 2026</p>
         </div>
@@ -758,7 +759,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
             <span>⚽ 5,000+ players</span>
             <span>🏆 200+ leagues</span>
-            <span>��� 15 cities</span>
+            <span>🌍 15 cities</span>
             <span>⭐ 4.8 rating</span>
           </div>
         </div>

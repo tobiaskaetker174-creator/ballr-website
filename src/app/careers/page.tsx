@@ -3,11 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
 
-const tabs = ["Organizer", "Franchise"] as const;
-type Tab = (typeof tabs)[number];
-
 export default function CareersPage() {
-  const [activeTab, setActiveTab] = useState<Tab>("Organizer");
 
   return (
     <div className="pt-24 pb-16">
@@ -124,52 +120,6 @@ function OrganizerForm() {
       <TextareaField label="Experience organizing sports events" name="experience" />
       <button type="submit" disabled={submitting} className="w-full bg-primary hover:bg-primary-dark text-text font-bold py-3 rounded-xl transition-colors disabled:opacity-60">
         {submitting ? "Submitting..." : "Submit Application"}
-      </button>
-    </form>
-  );
-}
-
-function FranchiseForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitting(true);
-    const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
-    try {
-      const res = await fetch("/api/careers", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "franchise", ...data }),
-      });
-      if (res.ok) setSubmitted(true);
-    } catch { /* fallback */ }
-    setSubmitting(false);
-  }
-
-  if (submitted) {
-    return (
-      <div className="bg-surface border border-accent/30 rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-3">✅</div>
-        <h3 className="text-lg font-bold mb-2">Inquiry Submitted</h3>
-        <p className="text-text-secondary text-sm">Our franchise team will reach out to discuss next steps.</p>
-      </div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="bg-surface border border-border/30 rounded-2xl p-6 sm:p-8 space-y-5">
-      <h3 className="text-lg font-bold">Franchise Inquiry</h3>
-      <InputField label="Full Name" name="name" required />
-      <InputField label="Email" name="email" type="email" required />
-      <InputField label="Target City" name="city" required />
-      <InputField label="Company / Organization" name="company" />
-      <TextareaField label="Tell us about your plans" name="plans" required />
-      <TextareaField label="Budget range (optional)" name="budget" />
-      <button type="submit" disabled={submitting} className="w-full bg-primary hover:bg-primary-dark text-text font-bold py-3 rounded-xl transition-colors disabled:opacity-60">
-        {submitting ? "Submitting..." : "Submit Inquiry"}
       </button>
     </form>
   );
