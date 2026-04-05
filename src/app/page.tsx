@@ -250,6 +250,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Global Stats Ticker */}
+      <section className="py-12 border-y border-border/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "6", label: "Countries", icon: "🌍" },
+              { value: "880+", label: "Players", icon: "⚽" },
+              { value: "350+", label: "Games Played", icon: "🏟️" },
+              { value: "100%", label: "Community-Run", icon: "🤝" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-3xl mb-1">{s.icon}</div>
+                <div className="text-2xl sm:text-3xl font-black text-accent">{s.value}</div>
+                <div className="text-xs text-text-muted mt-1 uppercase tracking-wide">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases */}
       <section className="py-24 bg-surface/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
